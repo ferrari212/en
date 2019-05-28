@@ -1,0 +1,103 @@
+canvas {
+  /* border: 1px black solid; */
+  position: absolute
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+  width: 100%
+}
+
+.navbar {
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  font-weight:800;
+  /* text-transform: uppercase; */
+  font-size: 2em;
+}
+
+.nav-item{
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link {
+  padding: 5px 15px;
+}
+
+.banner{
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0 200px;
+}
+
+.banner h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.8em;
+  font-weight: 1000;
+  color: #295773;
+}
+
+.banner p {
+  margin: 1em 0 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #295773;
+}
+
+.btnD1 {
+  display: inline-block;
+  margin: 1em 0 0;
+  background: #A60D0D;
+  color: #DCE8F2;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 800;
+}
+
+.btnD1:hover {
+  color: #011C40;
+  background: #DCE8F2;
+  border-color: #011C40;
+  /* text-decoration: none; */
+}
+
+.navbar-dark .navbar-toggler{
+  border:none
+  color: #011C40;
+  border: 2px solid #011C40;
+}
+
+/* Color Theme Swatches in Hex */
+.Sailing-yacht-regatta.-Yachting.-Sailing-1-hex { color: #011C40; }
+.Sailing-yacht-regatta.-Yachting.-Sailing-2-hex { color: #8AA6BF; }
+.Sailing-yacht-regatta.-Yachting.-Sailing-3-hex { color: #DCE8F2; }
+.Sailing-yacht-regatta.-Yachting.-Sailing-4-hex { color: #295773; }
+.Sailing-yacht-regatta.-Yachting.-Sailing-5-hex { color: #A60D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Sailing-yacht-regatta.-Yachting.-Sailing-1-rgba { color: rgba(1, 28, 63, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-2-rgba { color: rgba(137, 166, 191, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-3-rgba { color: rgba(220, 232, 242, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-4-rgba { color: rgba(41, 86, 114, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-5-rgba { color: rgba(165, 13, 13, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Sailing-yacht-regatta.-Yachting.-Sailing-1-hsla { color: hsla(213, 96, 12, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-2-hsla { color: hsla(208, 29, 64, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-3-hsla { color: hsla(208, 46, 90, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-4-hsla { color: hsla(202, 47, 30, 1); }
+.Sailing-yacht-regatta.-Yachting.-Sailing-5-hsla { color: hsla(0, 85, 35, 1); }
