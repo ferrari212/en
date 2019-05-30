@@ -1,16 +1,35 @@
+body {
+  margin: 0;
+}
+
+
 canvas {
   /* border: 1px black solid; */
   position: absolute
 }
 
-body {
-  margin: 0;
-}
-
 header {
   position: absolute;
   z-index: 10;
+  width: 100%;
+}
+
+h2 b {
+  color: #A60D0D;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
   width: 100%
+}
+
+#learnVon {
+  position: absolute;
+  left: 10vw;
+  top: 80vh;
 }
 
 .navbar {
@@ -32,54 +51,101 @@ header {
   padding: 5px 15px;
 }
 
-.banner{
-  position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  padding: 250px 0 200px;
+.section1{
+  padding: 25vh 0 0px;
+  height: 100vh;
 }
 
-.banner h2 {
+.section1 h2 {
   margin: 0;
   padding: 0;
   font-size: 2.8em;
-  font-weight: 1000;
-  color: #295773;
+  font-weight: 500;
+  color: #011C40;
 }
 
-.banner p {
+.section1 p {
   margin: 1em 0 0;
   padding: 0;
   font-size: 1.2em;
   line-height: 1.5;
   font-weight: 500;
-  color: #295773;
+  color: #011C40;
+}
+
+.section2 {
+  padding: 200px 0 0px;
+  height: 100vh;
+}
+
+.section3 {
+  padding: 200px 0 0px;
+  height: 100vh;
 }
 
 .btnD1 {
   display: inline-block;
   margin: 1em 0 0;
-  background: #A60D0D;
   color: #DCE8F2;
   padding: 10px 20px;
   text-transform: uppercase;
   border: none;
   font-weight: 800;
+  background-image: linear-gradient(to bottom, #f04242, #A60D0D);
 }
 
 .btnD1:hover {
-  color: #011C40;
+  color: #DCE8F2;
   background: #DCE8F2;
-  border-color: #011C40;
+  background-image: linear-gradient(to bottom, #367196, #295773);
   /* text-decoration: none; */
 }
 
 .navbar-dark .navbar-toggler{
   border:none
   color: #011C40;
-  border: 2px solid #011C40;
 }
+
+/* Animation bar  */
+
+.animation-bar-1 {
+  position: relative;
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  background: rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 1);
+}
+
+.animation-bar-1 span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+  background-color: #f56982;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+}
+
+.run-bar {
+  animation: progress-bar-1 6s 1 ease-out;
+  width:60%;
+}
+
+@keyframes progress-bar-1 {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+
 
 /* Color Theme Swatches in Hex */
 .Sailing-yacht-regatta.-Yachting.-Sailing-1-hex { color: #011C40; }
