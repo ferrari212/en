@@ -29,10 +29,14 @@ function orthogonalization(v1, v2, cos, sin) {
   return [u, v];
 }
 
+
+
 // --------- Begining of Simulation 1 --------- //
+var doAnim = true;
 var simulation1 = function() {
+
   const canvas = document.querySelector('canvas')
-  const c = canvas.getContext('2d')
+  var c = canvas.getContext('2d')
   canvas.width = $("body").prop("clientWidth");
   canvas.height = innerHeight;
 
@@ -213,7 +217,7 @@ var simulation1 = function() {
     vortices[0] = new Vortex();
 
     // Abruptly creation
-    for (let i = 0; i < canvas.width * 1.5; i++) {
+    for (let i = 0; i < canvas.width; i++) {
       const radius = (Math.random() * 2) + 1;
       x = randomIntFromRange(-100, canvas.width);
       y = randomIntFromRange(-100, canvas.height + 100);
@@ -225,6 +229,13 @@ var simulation1 = function() {
 
   // Animation Loop
   function animate() {
+
+    // Decide if keeps the animation
+    if (!doAnim) {
+      c = null;
+      return;
+    }
+
     requestAnimationFrame(animate)
     // c.clearRect(0, 0, canvas.width, canvas.height)
     c.fillStyle = 'rgba(220, 232, 242, 0.05)';
@@ -259,6 +270,28 @@ var simulation1 = function() {
     circle.draw();
   }
 
+  // Way point to stop and play over the simulation
+  var waypoint = new Waypoint({
+    element: document.getElementsByClassName('section2'),
+    handler: function(direction) {
+      if (direction == 'down') {
+        doAnim = false;
+      } else {
+        c = canvas.getContext('2d')
+        doAnim = true;
+        init();
+        animate();
+        document.getElementById('header').classList.remove('fixed-bar');
+
+        // change active bar
+        $('a.active').removeClass("active");
+        $('a[rel=section1]').addClass("active");
+      }
+    },
+    offset: 200
+  });
+
+
   init();
   animate();
 }
@@ -266,14 +299,72 @@ var simulation1 = function() {
 var simulationbar = function() {
   var waypoint = new Waypoint({
     element: document.getElementsByClassName('section2'),
-    handler: function(direction) {
-      console.log(direction);
+    handler: function() {
       document.getElementById('header').classList.add('fixed-bar');
+      $('a.active').removeClass("active");
+      $('a[rel=section2]').addClass("active");
       document.getElementById('waypoint-1-1').classList.add('run-bar-1-1');
+      document.getElementById('waypoint-1-2').classList.add('run-bar-1-2');
+      document.getElementById('waypoint-1-3').classList.add('run-bar-1-3');
+      document.getElementById('waypoint-1-4').classList.add('run-bar-1-4');
+      document.getElementById('waypoint-1-5').classList.add('run-bar-1-5');
       document.getElementById('waypoint-2-1').classList.add('run-bar-2-1');
+      document.getElementById('waypoint-2-2').classList.add('run-bar-2-2');
+      document.getElementById('waypoint-2-3').classList.add('run-bar-2-3');
+      document.getElementById('waypoint-2-4').classList.add('run-bar-2-4');
+      document.getElementById('waypoint-2-5').classList.add('run-bar-2-5');
     }
+  });
+
+  var waypoint = new Waypoint({
+    element: document.getElementsByClassName('section3'),
+    handler: function() {
+      $('a.active').removeClass("active");
+      $('a[rel=section3]').addClass("active");
+    }
+  });
+
+  var waypoint = new Waypoint({
+    element: document.getElementsByClassName('section4'),
+    handler: function() {
+      $('a.active').removeClass("active");
+      $('a[rel=section4]').addClass("active");
+    }
+  });
+
+  var waypoint = new Waypoint({
+    element: document.getElementsByClassName('section5'),
+    handler: function() {
+      $('a.active').removeClass("active");
+      $('a[rel=section5]').addClass("active");
+    },
+    offset: '25%'
   });
 }
 
+$(document).ready(function() {
+  $('.nav-link')
+    .on("click", function() {
+      //verify witch panel to show
+      var panelToShow = $(this).attr("rel");
+
+      // Scroll down
+      $('html, body').animate({
+        'scrollTop': $('.' + panelToShow).offset().top
+      }, 1500, 'swing');
+    });
+
+  $('.learn-more')
+    .on("click", function() {
+
+      // Scroll down
+      $('html, body').animate({
+        'scrollTop': $('.section2').offset().top
+      }, 1500, 'swing');
+    });
+});
+
+
 simulation1();
 simulationbar();
+// menufunction();

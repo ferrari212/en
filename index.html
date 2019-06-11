@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <title>Felipe Ferrari</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
   <!-- <script src="style.css"></script> -->
-  <header id="header" style="background-color: #295773; color: white;">
+  <header id="header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Felipe Ferrari</a>
@@ -20,17 +21,20 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link active" rel="section1" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Me</a>
+              <a class="nav-link" rel="section2" href="#">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Naval Projects</a>
+              <a class="nav-link" rel="section3" href="#">Naval Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Data Analysis</a>
+              <a class="nav-link" rel="section4" href="#">Data Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" rel="section5" href="#">Contacts</a>
             </li>
           </ul>
         </div>
@@ -47,7 +51,7 @@
           <div class="col-md-6 offset-md-6">
             <h2>Hi, I am <b>Felipe Ferrari</b> and I want to <b>Revolutuinize</b> Shipping Industry.</h2>
             <p>Discover how I can transform your business using new technologies like big data and digital visulaization.</p>
-            <a href="#" class="btnD1 rounded">Learn More</a>
+            <a href="#" class="btnD1 rounded learn-more">Learn More</a>
           </div>
         </div>
       </div>
@@ -67,15 +71,6 @@
 
     <div class="section2">
       <div class="container">
-
-        <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-          href="https://unsplash.com/@_dorian_?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer"
-          title="Download free do whatever you want high-resolution photos from Dorian Mongel"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
-              style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
-              <title>unsplash-logo</title>
-              <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-            </svg></span><span style="display:inline-block;padding:2px 3px">Dorian Mongel</span></a> -->
-
         <div class="row">
           <div class="col-md-4">
 
@@ -189,11 +184,18 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-6 offset-6">
+            <br>
+            <h6 class="reference" style="color: #DCE8F2">Photo by <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/photos/QPNpXcQfdLA">
+                  Cristina Gottardi</a></b> on <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).</h6>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div class="section3">
-      <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brucebmax?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Bruce Warrington"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Bruce Warrington</span></a> -->
 
       <div class="container">
         <div class="row">
@@ -205,7 +207,6 @@
             <h2>Lorem ipsum dolor sit amet...</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
 
             <div class="row">
@@ -222,6 +223,15 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-6 offset-6">
+            <br>
+            <h6 class="reference">Photo by <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/photos/5Rgr_zI7pBw">Dorian Mongel</a></b> on <b><a style="text-decoration: none; color: #DCE8F2" target="_blank"
+                  href="https://unsplash.com/">Unsplash</a></b> (adapted).</h6>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -231,15 +241,22 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-5">
-            <h1>Lorem ipsum dolor sit amet...</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <h2>Lorem ipsum dolor sit amet...</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
           </div>
 
           <div class="col-lg-7">
             <a><img class="static" height="400" width="548.3" src="images/Ship_in_Ocean_heave_only.png"><img class="active" height="400" width="548.3" src="images/Ship_in_Ocean_heave_only.gif"></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 offset-6">
+            <br>
+            <h6 class="reference">Photo by <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/photos/OKOOGO578eo">Anastasia Dulgier</a></b> on <b><a style="text-decoration: none; color: #DCE8F2"
+                  target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).</h6>
           </div>
         </div>
       </div>
@@ -248,26 +265,66 @@
 
     <div class="section5">
 
-      <div class="container">
+      <div id="contact" class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h1>Lorem ipsum dolor sit amet...</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-
-          <div class="col-md-6 offset-md-6">
-            <p>teste</p>
+          <div class="col-md-6 offset-md-3">
+            <h2>Contact</h2>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <p>
+              <svg style="width:50px;height:50px" viewBox="0 0 24 24">
+                <path fill="#011C40"
+                  d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
+              </svg>
+              @felipe ferrari
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <p>
+              <svg style="width:50px;height:50px" viewBox="0 0 24 24">
+                <path fill="#011C40"
+                  d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H14.56C14.24,20.93 14.23,20.32 14.23,20.11L14.24,17.64C14.24,16.8 13.95,16.25 13.63,15.97C15.64,15.75 17.74,15 17.74,11.53C17.74,10.55 17.39,9.74 16.82,9.11C16.91,8.89 17.22,7.97 16.73,6.73C16.73,6.73 15.97,6.5 14.25,7.66C13.53,7.46 12.77,7.36 12,7.35C11.24,7.36 10.46,7.46 9.75,7.66C8.03,6.5 7.27,6.73 7.27,6.73C6.78,7.97 7.09,8.89 7.18,9.11C6.61,9.74 6.26,10.55 6.26,11.53C6.26,15 8.36,15.75 10.36,16C10.1,16.2 9.87,16.6 9.79,17.18C9.27,17.41 7.97,17.81 7.17,16.43C7.17,16.43 6.69,15.57 5.79,15.5C5.79,15.5 4.91,15.5 5.73,16.05C5.73,16.05 6.32,16.33 6.73,17.37C6.73,17.37 7.25,19.12 9.76,18.58L9.77,20.11C9.77,20.32 9.75,20.93 9.43,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" />
+              </svg>
+              @felipe ferrari
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <p>
+              <svg style="width:50px;height:50px" viewBox="0 0 24 24">
+                <path fill="#011C40" d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+              </svg>
+              felipe.ferrari.212@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <p>
+              <svg style="width:50px;height:50px" viewBox="0 0 24 24">
+                <path fill="#011C40"
+                  d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+              </svg>
+              felipe.ferrari.212@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <h6 class="reference">Photo by <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/photos/p-_RJY6hN3E">Tomas Williams
+            </a></b> on <b><a style="text-decoration: none; color: #DCE8F2" target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).</h6>
+
+
       </div>
 
     </div>
 
   </section>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
