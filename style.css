@@ -51,9 +51,9 @@ section {
 }
 
 #learnVon {
-  position: absolute;
-  left: 10vw;
-  top: 80vh;
+  position: relative;
+  left: 100px;
+  bottom:110px;
 }
 
 .navbar {
@@ -76,9 +76,10 @@ section {
 }
 
 .reference {
-  position: absolute;
-  bottom:2px;
-  right: 16px;
+  position: relative;
+  padding: 0 25px 0;
+  bottom:25px;
+  text-align: right;
   font-size: 12px;
   color: #DCE8F2;
 }
@@ -156,7 +157,9 @@ section {
 .section3 p {
   margin: 1em 0 0;
   padding: 0;
-  font-size: 20px;
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 500;
   color: #DCE8F2;
@@ -166,8 +169,8 @@ section {
   padding: 100px 0 0px;
   height: 100vh;
   background:
-    linear-gradient(rgba(165, 13, 13, 0.1),
-    rgba(165, 13, 13, 0.1)),
+    linear-gradient(rgba(165, 13, 13, 0.15),
+    rgba(165, 13, 13, 0.25)),
     url("images/background4.jpg");
   background-size: 100vw auto;
   background-position: center;
@@ -184,7 +187,9 @@ section {
 .section4 p {
   margin: 1em 0 0;
   padding: 0;
-  font-size: 20px;
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 500;
   color: #DCE8F2;
@@ -224,8 +229,11 @@ section {
 #contact {
   margin: auto 0 auto;
   background-color: #dc3545;
-  height: 100%;
   width: 50%;
+}
+
+.container {
+  height: 100%;
 }
 
 .static {
