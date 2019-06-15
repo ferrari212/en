@@ -1,3 +1,11 @@
+// --------- DOM objects --------- //
+var $asection1 = $('a[rel=section1]');
+var $asection2 = $('a[rel=section2]');
+var $asection3 = $('a[rel=section3]');
+var $asection4 = $('a[rel=section4]');
+var $asection5 = $('a[rel=section5]');
+
+
 // --------- Important Functions Used --------- //
 function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
@@ -216,10 +224,10 @@ var simulation1 = function() {
 
     vortices[0] = new Vortex();
 
-    // Abruptly creation
-    for (let i = 0; i < canvas.width; i++) {
+    // Abruptly creation particles
+    for (let i = 0; i < canvas.width * 0.8; i++) {
       const radius = (Math.random() * 2) + 1;
-      x = randomIntFromRange(-100, canvas.width);
+      x = randomIntFromRange(-100, 1.1 * canvas.width);
       y = randomIntFromRange(-100, canvas.height + 100);
       particles.push(new Particle(x, y, radius, colors))
     }
@@ -285,12 +293,14 @@ var simulation1 = function() {
 
         // change active bar
         $('a.active').removeClass("active");
-        $('a[rel=section1]').addClass("active");
+        $asection1.addClass("active");
       }
     },
     offset: 200
   });
 
+  // stop animation by clicking button
+  
 
   init();
   animate();
@@ -302,7 +312,7 @@ var simulationbar = function() {
     handler: function() {
       document.getElementById('header').classList.add('fixed-bar');
       $('a.active').removeClass("active");
-      $('a[rel=section2]').addClass("active");
+      $asection2.addClass("active");
       document.getElementById('waypoint-1-1').classList.add('run-bar-1-1');
       document.getElementById('waypoint-1-2').classList.add('run-bar-1-2');
       document.getElementById('waypoint-1-3').classList.add('run-bar-1-3');
@@ -320,7 +330,7 @@ var simulationbar = function() {
     element: document.getElementsByClassName('section3'),
     handler: function() {
       $('a.active').removeClass("active");
-      $('a[rel=section3]').addClass("active");
+      $asection3.addClass("active");
     }
   });
 
@@ -328,7 +338,7 @@ var simulationbar = function() {
     element: document.getElementsByClassName('section4'),
     handler: function() {
       $('a.active').removeClass("active");
-      $('a[rel=section4]').addClass("active");
+      $asection4.addClass("active");
     }
   });
 
@@ -336,7 +346,7 @@ var simulationbar = function() {
     element: document.getElementsByClassName('section5'),
     handler: function() {
       $('a.active').removeClass("active");
-      $('a[rel=section5]').addClass("active");
+      $asection5.addClass("active");
     },
     offset: '25%'
   });
