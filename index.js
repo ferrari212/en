@@ -1,4 +1,5 @@
 // --------- DOM objects --------- //
+var $body = $("body")
 var $asection1 = $('a[rel=section1]');
 var $asection2 = $('a[rel=section2]');
 var $asection3 = $('a[rel=section3]');
@@ -45,7 +46,7 @@ var simulation1 = function() {
 
   const canvas = document.querySelector('canvas')
   var c = canvas.getContext('2d')
-  canvas.width = $("body").prop("clientWidth");
+  canvas.width = $body.prop("clientWidth");
   canvas.height = innerHeight;
 
   // canvas.width = innerWidth
@@ -73,7 +74,7 @@ var simulation1 = function() {
   })
 
   addEventListener('resize', () => {
-    canvas.width = $("body").prop("clientWidth");
+    canvas.width = $body.prop("clientWidth");
     canvas.height = innerHeight
 
     init();
@@ -300,7 +301,7 @@ var simulation1 = function() {
   });
 
   // stop animation by clicking button
-  
+
 
   init();
   animate();
@@ -350,7 +351,158 @@ var simulationbar = function() {
     },
     offset: '25%'
   });
-}
+};
+
+var simulation2 = function() {
+  // create a tab explanation point
+    function showTooltip (x, y, contents) {
+      $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute', display:'none', top: y+5, left: x+5,
+        border: ' x solid #fdd', padding: '2px',  'background-color':'#fee',
+        opacity: 0.80
+      }).appendTo('body').fadeIn(200);
+    }
+
+    var canada = [[2016, 158046],
+                  [2015, 154620],
+                  [2014, 149405],
+                  [2013, 135353],
+                  [2012, 124862],
+                  [2011, 114482],
+                  [2010, 108045],
+                  [2009, 101446],
+                  [2008, 107675],
+                  [2007, 107094],
+                  [2006, 113002]];
+
+    var china = [[2016, 199685],
+                  [2015, 214556],
+                  [2014, 211429],
+                  [2013, 209918],
+                  [2012, 207478],
+                  [2011, 202875],
+                  [2010, 203014],
+                  [2009, 189490],
+                  [2008, 190440],
+                  [2007, 186318],
+                  [2006, 184766]];
+
+    var iran = [[2016, 187209],
+                  [2015, 139414],
+                  [2014, 139707],
+                  [2013, 140612],
+                  [2012, 142127],
+                  [2011, 194613],
+                  [2010, 196548],
+                  [2009, 195799],
+                  [2008, 200789],
+                  [2007, 204583],
+                  [2006, 203400]];
+
+    var iraq = [[2016, 220339],
+                  [2015, 171889],
+                  [2014, 152906],
+                  [2013, 146340],
+                  [2012, 144902],
+                  [2011, 130575],
+                  [2010, 116307],
+                  [2009, 115221],
+                  [2008, 112509],
+                  [2007, 93174],
+                  [2006, 96429]];
+
+    var kwait = [[2016, 149758],
+                  [2015, 144919],
+                  [2014, 145319],
+                  [2013, 148110],
+                  [2012, 148833],
+                  [2011, 132571],
+                  [2010, 115290],
+                  [2009, 112772],
+                  [2008, 133801],
+                  [2007, 128376],
+                  [2006, 131865]];
+
+    var russia = [[2016, 149758],
+                  [2015, 144919],
+                  [2014, 145319],
+                  [2013, 148110],
+                  [2012, 148833],
+                  [2011, 132571],
+                  [2010, 115290],
+                  [2009, 112772],
+                  [2008, 133801],
+                  [2007, 128376],
+                  [2006, 131865]];
+
+    var saudiarabia = [[2016, 523010],
+                  [2015, 508237],
+                  [2014, 484110],
+                  [2013, 480352],
+                  [2012, 487969],
+                  [2011, 464088],
+                  [2010, 406992],
+                  [2009, 407930],
+                  [2008, 459694],
+                  [2007, 439406],
+                  [2006, 458951]];
+
+    var uea = [[2016, 154189],
+                  [2015, 148838],
+                  [2014, 139113],
+                  [2013, 139278],
+                  [2012, 132469],
+                  [2011, 127675],
+                  [2010, 115724],
+                  [2009, 111641],
+                  [2008, 123937],
+                  [2007, 121523],
+                  [2006, 123397]];
+
+    var usa = [[2016, 438053],
+                  [2015, 464056],
+                  [2014, 431745],
+                  [2013, 368266],
+                  [2012, 321319],
+                  [2011, 278330],
+                  [2010, 270234],
+                  [2009, 264405],
+                  [2008, 244840],
+                  [2007, 249791],
+                  [2006, 251657]];
+
+    // introduce to plot
+      data = [{data:canada, label: "Canada", lines:{show:true, width:0.5},points:{show:true}, color: "#2f9a4e"},
+      {data:china, label: "China", lines:{show:true, width:0.5},points:{show:true}},
+      {data:iran, label: "Iran", lines:{show:true, width:0.5},points:{show:true}},
+      {data:iraq, label: "Iraq", lines:{show:true, width:0.5},points:{show:true}},
+      {data:russia, label: "Russia", lines:{show:true, width:0.5},points:{show:true}},
+      {data:saudiarabia, label: "Saudi Arabia", lines:{show:true, width:0.5},points:{show:true}},
+      {data:uea, label: "UEA", lines:{show:true, width:0.5},points:{show:true}},
+      {data:saudiarabia, label: "Saudi Arabia", lines:{show:true, width:0.5},points:{show:true}},
+      {data:usa, label: "USA", lines:{show:true, width:0.5},points:{show:true}},
+      {data:russia, label: "Russia", lines:{show:true, width:0.5},points:{show:true}}];
+      options = {legend:{position:'nw'},
+                grid:{clickable:true, hoverable:true},
+                axisLabels: {show: true},
+                xaxes: [{axisLabel: 'Year'}],
+                yaxes: [{position: 'left',axisLabel: 'Production (Metric tons, thousand)'}]
+              };
+
+    // plot chart
+    chart1 = $.plot($('#placeholder'), data, options);
+
+    // highlight one element in chart
+      $('#placeholder').bind('plothover', function(event, pos, item){
+        $('#tooltip').remove();
+        if (item) {
+          // console.log(item.datapoint[0]);
+          var x = item.datapoint[0].toFixed(0), y = item.datapoint[1].toFixed(0);
+          showTooltip(item.pageX, item.pageY,
+            item.series.label + ": Year = " + x + "; Prod. = " + y + " m.");
+        }
+      });
+};
 
 $(document).ready(function() {
   $('.nav-link')
@@ -376,5 +528,6 @@ $(document).ready(function() {
 
 
 simulation1();
+simulation2();
 simulationbar();
 // menufunction();
