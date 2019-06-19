@@ -108,7 +108,7 @@ section {
 
 .section2 {
   padding: 65px 0 0px;
-  height: 100vh;
+  height: 625px;
   background:
     linear-gradient(rgba(220, 232, 242, 0.45),
     rgba(220, 232, 242, 0.45)),
@@ -137,7 +137,7 @@ section {
 
 .section3 {
   padding: 100px 0 0px;
-  height: 100vh;
+  height: 625px;
   background:
     linear-gradient(rgba(41, 86, 114, 0.65),
     rgba(41, 86, 114, 0.65)),
@@ -167,7 +167,7 @@ section {
 
 .section4 {
   padding: 100px 0 0px;
-  height: 100vh;
+  height: 625px;
   background:
     linear-gradient(rgba(165, 13, 13, 0.15),
     rgba(165, 13, 13, 0.25)),
@@ -198,7 +198,7 @@ section {
 .section5 {
   text-align: center;
   padding: 0px 0 0px;
-  height: 80vh;
+  height: 500px;
   background:
     linear-gradient(rgba(165, 13, 13, 0.1),
     rgba(165, 13, 13, 0.1)),
