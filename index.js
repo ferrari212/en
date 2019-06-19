@@ -38,7 +38,11 @@ function orthogonalization(v1, v2, cos, sin) {
   return [u, v];
 }
 
+// --------- Enabling tooltip --------- //
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 // --------- Begining of Simulation 1 --------- //
 var doAnim = true;
@@ -486,7 +490,7 @@ var simulation2 = function() {
                 grid:{clickable:true, hoverable:true},
                 axisLabels: {show: true},
                 xaxes: [{axisLabel: 'Year'}],
-                yaxes: [{position: 'left',axisLabel: 'Production (Metric tons, thousand)'}]
+                yaxes: [{position: 'left',axisLabel: 'Oil Production (Metric tons, thousand)'}]
               };
 
     // plot chart
