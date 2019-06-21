@@ -97,6 +97,13 @@ section {
   color: #011C40;
 }
 
+.section1 h3 {
+  margin: .5em 0 0;
+  padding: 0;
+  font-weight: 500;
+  color: #011C40;
+}
+
 .section1 p {
   margin: 1em 0 0;
   padding: 0;
