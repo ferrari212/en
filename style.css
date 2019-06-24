@@ -51,9 +51,17 @@ section {
 }
 
 #learnVon {
-  position: relative;
+  /* position: relative;
   left: 100px;
-  bottom:110px;
+  bottom:110px; */
+}
+
+.expertises.active-video {
+  color: #A60D0D;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
 }
 
 .navbar {
@@ -243,13 +251,13 @@ section {
   height: 100%;
 }
 
-.static {
+/* .static {
   position: absolute;
 }
 
 .static:hover {
   opacity: 0;
-}
+} */
 
 .btnD1 {
   display: inline-block;
@@ -261,8 +269,12 @@ section {
   text-align: center;
   border: none;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
   /* background-image: linear-gradient(to bottom, #f04242, #A60D0D); */
+}
+
+.invisible {
+  display: none;
 }
 
 .btnD1:hover {
