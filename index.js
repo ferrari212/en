@@ -348,7 +348,8 @@ var simulationbar = function() {
       document.getElementById('waypoint-2-3').classList.add('run-bar-2-3');
       document.getElementById('waypoint-2-4').classList.add('run-bar-2-4');
       document.getElementById('waypoint-2-5').classList.add('run-bar-2-5');
-    }
+    },
+    offset: '10%'
   });
 
   var waypoint = new Waypoint({
