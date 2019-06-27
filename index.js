@@ -93,11 +93,21 @@ var simulation1 = function() {
 
   // Create Circunference
   function Circle() {
-    this.x = innerWidth / 4;
-    this.y = innerHeight / 2;
-    this.radius = innerWidth / 32;
+
+    if (innerWidth > 992) {
+      this.x = innerWidth / 4;
+      this.y = innerHeight / 2;
+      this.radius = 50;
+      this.U = innerWidth / 1000;
+    } else {
+      this.x = innerWidth / 4;
+      this.y = 3 * innerHeight / 4;
+      this.radius = 75;
+      this.U = 1;
+    }
+
+
     this.color = '#011C40';
-    this.U = (innerWidth > 1000 ? innerWidth / 1000 : 1);
 
     this.draw = function() {
       c.beginPath();
