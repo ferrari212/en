@@ -2,6 +2,21 @@ body {
   margin: 0;
 }
 
+body h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+body h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+body p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 canvas {
   /* border: 1px black solid; */
   position: absolute
@@ -19,6 +34,17 @@ img {
   margin-right: auto;
 }
 
+h2 b {
+  color: #A60D0D;
+}
+
+section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%
+}
+
 /* -------------- Header Simulation ------------  */
 .fixed-bar {
   animation: run-fixed-bar 0.4s 1 linear forwards;
@@ -34,20 +60,6 @@ img {
     position: fixed;
     transform: translateY(0px);
   }
-}
-
-h2 b {
-  color: #A60D0D;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-
-
-section {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 100%
 }
 
 #learnVon {
@@ -97,32 +109,27 @@ section {
   color: #DCE8F2;
 }
 
+.red-background {
+  color: #DCE8F2;
+}
+
 .section1 {
-  padding: 25vh 0 0px;
+  padding: 15vh 0 0px;
   height: 100vh;
 }
 
 .section1 h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 40px;
-  font-weight: 500;
   color: #011C40;
 }
 
 .section1 h3 {
   margin: .5em 0 0;
-  padding: 0;
-  font-weight: 500;
   color: #011C40;
 }
 
 .section1 p {
   margin: 1em 0 0;
-  padding: 0;
-  font-size: 20px;
   line-height: 1.5;
-  font-weight: 500;
   color: #011C40;
 }
 
@@ -139,18 +146,12 @@ section {
 
 .section2 h2 {
   margin: 0;
-  padding: 0;
-  font-size: 2.8em;
-  font-weight: 500;
   color: #011C40;
 }
 
 .section2 p {
   margin: 1em 0 0;
-  padding: 0;
-  font-size: 20px;
   line-height: 1.5;
-  font-weight: 500;
   text-align: center;
   color: #011C40;
 }
@@ -168,20 +169,14 @@ section {
 
 .section3 h2 {
   margin: 0;
-  padding: 0;
-  font-size: 2.8em;
-  font-weight: 500;
   color: #DCE8F2;
 }
 
 .section3 p {
   margin: 1em 0 0;
-  padding: 0;
   text-align: justify;
   text-indent: 20px;
-  font-size: 22px;
   line-height: 1.5;
-  font-weight: 500;
   color: #DCE8F2;
 }
 
@@ -198,20 +193,15 @@ section {
 
 .section4 h2 {
   margin: 0;
-  padding: 0;
   font-size: 2.8em;
-  font-weight: 500;
   color: #DCE8F2;
 }
 
 .section4 p {
   margin: 1em 0 0;
-  padding: 0;
   text-align: justify;
   text-indent: 20px;
-  font-size: 22px;
   line-height: 1.5;
-  font-weight: 500;
   color: #DCE8F2;
 }
 
@@ -230,19 +220,13 @@ section {
 
 .section5 h2 {
   margin: 40px 0 0px;
-  padding: 0;
-  font-size: 2.8em;
-  font-weight: 500;
   color: #011C40;
   text-transform: uppercase;
 }
 
 .section5 p {
   margin: 40px 0 0;
-  padding: 0;
-  font-size: 20px;
   line-height: 1.5;
-  font-weight: 500;
   color: #011C40;
 }
 
@@ -303,7 +287,6 @@ section {
   position: relative;
   display: block;
   padding: 5px;
-  font-size: 16px;
   line-height: 16px;
   border-radius: 30px;
   background: rgba(0, 0, 0, 0.1);
@@ -479,18 +462,68 @@ section {
 }
 
 @media screen and (max-width:1200px){
-  .section2 {
-    background-size: auto 100vh;
+  .reference {
+    font-size: 16px;
   }
+
+  .section1 {
+    padding: 10vh 0 0px;
+    height: 100vh;
+  }
+
+  .section2 {
+    background-size: auto 100%;
+  }
+
+  .section5 {
+    background-size: auto 100%;
+  }
+
+
+  /* body h2 {
+    font-size: 45px;
+  }
+
+  body h3 {
+    font-size: 35px;
+  }
+
+  body p {
+    font-size: 23px;
+  } */
 }
 
 @media screen and (max-width:992px){
+  .reference {
+    font-size: 20px;
+  }
+
   .section3 {
-    background-size: auto 100vh;
+    background-size: auto 100%;
+  }
+
+  .section5 {
+    background-image: none;
+  }
+
+  .is-mobile {
+    display: none;
+  }
+
+  body h2 {
+    font-size: 60px;
+  }
+
+  body h3 {
+    font-size: 50px;
+  }
+
+  body p {
+    font-size: 36px;
   }
 }
 
-@media screen and (max-width:5544px){
+@media screen and (max-width:576px){
 
 }
 

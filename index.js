@@ -10,8 +10,7 @@ var $learnmore = $('.learn-more');
 var $icon = $('.icon');
 var $learnvon = $('.learnVon');
 var $expertises = $('.expertises');
-
-
+var $contact = $('#contact');
 
 
 // --------- Important Functions Used --------- //
@@ -98,11 +97,13 @@ var simulation1 = function() {
       this.x = innerWidth / 4;
       this.y = innerHeight / 2;
       this.radius = 50;
+      radius = 1;
       this.U = innerWidth / 1000;
     } else {
       this.x = innerWidth / 4;
       this.y = 3 * innerHeight / 4;
       this.radius = 75;
+      radius = 2;
       this.U = 1;
     }
 
@@ -121,7 +122,7 @@ var simulation1 = function() {
   }
 
   // Create Particles
-  function Particle(x, y, radius, color) {
+  function Particle(x, y, color) {
     this.x = x;
     this.y = y;
     this.cos;
@@ -136,7 +137,7 @@ var simulation1 = function() {
     this.vvx = [];
     this.vvy = [];
     this.vorcirculation = [];
-    this.radius = 1;
+    this.radius = radius;
     this.color = color;
     this.lastMouse = {
       x: x,
@@ -230,6 +231,7 @@ var simulation1 = function() {
   let vortices;
   let x;
   let y;
+  let radius;
 
 
   var createVortex = false;
@@ -241,6 +243,7 @@ var simulation1 = function() {
     particles = [];
     vortices = [];
 
+
     circle = new Circle();
     circle.draw();
 
@@ -248,10 +251,9 @@ var simulation1 = function() {
 
     // Abruptly creation particles
     for (let i = 0; i < canvas.width * 0.8; i++) {
-      const radius = (Math.random() * 2) + 1;
       x = randomIntFromRange(-100, 1.1 * canvas.width);
       y = randomIntFromRange(-100, canvas.height + 100);
-      particles.push(new Particle(x, y, radius, colors))
+      particles.push(new Particle(x, y, colors))
     }
   }
 
@@ -679,6 +681,19 @@ var simulation2 = function() {
 };
 
 $(document).ready(function() {
+  // Bind to the resize event of the window object
+  $(window).on("resize", function() {
+    if (innerWidth < 992) {
+      $contact.addClass("col-12");
+      $contact.removeClass("col-6");
+    } else {
+      $contact.addClass("col-6");
+      $contact.removeClass("col-12");
+    }
+  }).resize();
+
+
+
   $navlink
     .on("click", function() {
       //verify witch panel to show
