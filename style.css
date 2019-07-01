@@ -12,6 +12,10 @@ body h3 {
   font-size: 30px;
 }
 
+body h6 {
+  color: #DCE8F2;
+}
+
 body p {
   font-size: 20px;
   font-weight: 500;
@@ -66,6 +70,11 @@ section {
   /* position: relative;
   left: 100px;
   bottom:110px; */
+}
+
+#placeholder {
+  width: auto;
+  height: 100%;
 }
 
 .expertises.active-video {
@@ -184,8 +193,8 @@ section {
   padding: 65px 0 0px;
   height: max-content;
   background:
-    linear-gradient(rgba(165, 13, 13, 0.15),
-    rgba(165, 13, 13, 0.25)),
+    linear-gradient(rgba(165, 13, 13, 0.3),
+    rgba(165, 13, 13, 0.3)),
     url("images/background4.jpg");
   background-size: 100vw auto;
   background-position: center;
@@ -462,6 +471,11 @@ section {
 }
 
 @media screen and (max-width:1200px){
+  #placeholder {
+    width: 650px;
+    height: 500px;
+  }
+
   .reference {
     font-size: 16px;
   }
