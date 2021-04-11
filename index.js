@@ -62,7 +62,7 @@ var simulation1 = function () {
 
 	const mouse = {
 		x: canvas.width / 2,
-		y: canvas.height / 2,
+		y: canvas.height / 2
 	}
 
 	var colors = [
@@ -70,7 +70,7 @@ var simulation1 = function () {
 		// '#8AA6BF',
 		// '#DCE8F2',
 		// '#295773',
-		"#A60D0D",
+		"#A60D0D"
 	]
 
 	// Event Listeners
@@ -137,7 +137,7 @@ var simulation1 = function () {
 		this.color = color
 		this.lastMouse = {
 			x: x,
-			y: y,
+			y: y
 		}
 	}
 
@@ -164,7 +164,7 @@ var simulation1 = function () {
 		// linear velocity due circunference presence
 		const v = {
 			r: circle.U * (1 - alpha) * this.cos,
-			theta: -circle.U * (1 + alpha) * this.sin,
+			theta: -circle.U * (1 + alpha) * this.sin
 		}
 
 		// ortogonalization function
@@ -182,7 +182,7 @@ var simulation1 = function () {
 
 		const lastPoint = {
 			x: this.x + this.vx,
-			y: this.y + this.vy,
+			y: this.y + this.vy
 		}
 
 		if (lastPoint.x > 1.1 * canvas.width) {
@@ -306,7 +306,7 @@ var simulation1 = function () {
 				$asection1.addClass("active")
 			}
 		},
-		offset: 200,
+		offset: 200
 	})
 
 	// stop animation by clicking button
@@ -331,7 +331,7 @@ var simulation1 = function () {
 // open pdf function
 function openPDF() {
 	// window.open("https://raw.githubusercontent.com/wiki/shiplab/vesseljs/files/open_6_DOF.pdf")
-	window.open("Felipe_CV_Software_Engineer.pdf")
+	window.open("Felipe_CV.pdf")
 }
 
 var simulationbar = function () {
@@ -352,7 +352,7 @@ var simulationbar = function () {
 			document.getElementById("waypoint-2-4").classList.add("run-bar-2-4")
 			document.getElementById("waypoint-2-5").classList.add("run-bar-2-5")
 		},
-		offset: "10%",
+		offset: "10%"
 	})
 
 	var waypoint = new Waypoint({
@@ -360,7 +360,7 @@ var simulationbar = function () {
 		handler: function () {
 			$("a.active").removeClass("active")
 			$asection3.addClass("active")
-		},
+		}
 	})
 
 	// var waypoint = new Waypoint({
@@ -377,7 +377,7 @@ var simulationbar = function () {
 			$("a.active").removeClass("active")
 			$asection5.addClass("active")
 		},
-		offset: "25%",
+		offset: "25%"
 	})
 }
 
@@ -393,7 +393,7 @@ var simulation2 = function () {
 				border: " x solid #fdd",
 				padding: "2px",
 				"background-color": "#fee",
-				opacity: 0.8,
+				opacity: 0.8
 			})
 			.appendTo("body")
 			.fadeIn(200)
@@ -410,7 +410,7 @@ var simulation2 = function () {
 		[2009, 101446],
 		[2008, 107675],
 		[2007, 107094],
-		[2006, 113002],
+		[2006, 113002]
 	]
 
 	var china = [
@@ -424,7 +424,7 @@ var simulation2 = function () {
 		[2009, 189490],
 		[2008, 190440],
 		[2007, 186318],
-		[2006, 184766],
+		[2006, 184766]
 	]
 
 	var iran = [
@@ -438,7 +438,7 @@ var simulation2 = function () {
 		[2009, 195799],
 		[2008, 200789],
 		[2007, 204583],
-		[2006, 203400],
+		[2006, 203400]
 	]
 
 	var iraq = [
@@ -452,7 +452,7 @@ var simulation2 = function () {
 		[2009, 115221],
 		[2008, 112509],
 		[2007, 93174],
-		[2006, 96429],
+		[2006, 96429]
 	]
 
 	var kwait = [
@@ -466,7 +466,7 @@ var simulation2 = function () {
 		[2009, 112772],
 		[2008, 133801],
 		[2007, 128376],
-		[2006, 131865],
+		[2006, 131865]
 	]
 
 	var russia = [
@@ -480,7 +480,7 @@ var simulation2 = function () {
 		[2009, 112772],
 		[2008, 133801],
 		[2007, 128376],
-		[2006, 131865],
+		[2006, 131865]
 	]
 
 	var saudiarabia = [
@@ -494,7 +494,7 @@ var simulation2 = function () {
 		[2009, 407930],
 		[2008, 459694],
 		[2007, 439406],
-		[2006, 458951],
+		[2006, 458951]
 	]
 
 	var uea = [
@@ -508,7 +508,7 @@ var simulation2 = function () {
 		[2009, 111641],
 		[2008, 123937],
 		[2007, 121523],
-		[2006, 123397],
+		[2006, 123397]
 	]
 
 	var usa = [
@@ -522,7 +522,7 @@ var simulation2 = function () {
 		[2009, 264405],
 		[2008, 244840],
 		[2007, 249791],
-		[2006, 251657],
+		[2006, 251657]
 	]
 
 	// introduce to plot
@@ -532,135 +532,135 @@ var simulation2 = function () {
 			label: "Canada",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
+				show: true
 			},
-			color: "#2f9a4e",
+			color: "#2f9a4e"
 		},
 		{
 			data: china,
 			label: "China",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: iran,
 			label: "Iran",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: iraq,
 			label: "Iraq",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: russia,
 			label: "Russia",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: saudiarabia,
 			label: "Saudi Arabia",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: uea,
 			label: "UEA",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: saudiarabia,
 			label: "Saudi Arabia",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: usa,
 			label: "USA",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
+				show: true
+			}
 		},
 		{
 			data: russia,
 			label: "Russia",
 			lines: {
 				show: true,
-				width: 0.5,
+				width: 0.5
 			},
 			points: {
-				show: true,
-			},
-		},
+				show: true
+			}
+		}
 	]
 	options = {
 		legend: {
-			position: "nw",
+			position: "nw"
 		},
 		grid: {
 			clickable: true,
-			hoverable: true,
+			hoverable: true
 		},
 		axisLabels: {
-			show: true,
+			show: true
 		},
 		xaxes: [
 			{
-				axisLabel: "Year",
-			},
+				axisLabel: "Year"
+			}
 		],
 		yaxes: [
 			{
 				position: "left",
-				axisLabel: "Oil Production (Metric tons, thousand)",
-			},
-		],
+				axisLabel: "Oil Production (Metric tons, thousand)"
+			}
+		]
 	}
 
 	// plot chart
@@ -705,7 +705,7 @@ $(document).ready(function () {
 			// Scroll down
 			$("html, body").animate(
 				{
-					scrollTop: $("." + panelToShow).offset().top,
+					scrollTop: $("." + panelToShow).offset().top
 				},
 				1500,
 				"swing"
@@ -717,7 +717,7 @@ $(document).ready(function () {
 		// Scroll down
 		$("html, body").animate(
 			{
-				scrollTop: $(".section2").offset().top,
+				scrollTop: $(".section2").offset().top
 			},
 			1500,
 			"swing"
