@@ -1,186 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Felipe Ferrari</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-		<link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Felipe Ferrari</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css"
+      media="all"
+      rel="stylesheet"
+    />
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141893892-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141893892-1"
+    ></script>
 
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
+    <!-- Script -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-			gtag("config", "UA-141893892-1");
-		</script>
-		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-		<!-- <script language="javascript" type="text/javascript" src="flot/jquery.flot.min.js"></script> -->
-		<!-- <script language="javascript" type="text/javascript" src="flot/jquery.flot.axislabels.js"></script> -->
-	</head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-	<body>
-		<!-- <script src="style.css"></script> -->
-		<header id="header">
-			<div class="container">
-				<nav class="navbar navbar-expand-lg navbar-dark">
-					<a class="navbar-brand" href="#">Felipe Ferrari</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ml-lg-auto">
-							<li class="nav-item">
-								<a class="nav-link active" rel="section1" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" rel="section2" href="#">About Me</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" rel="section3" href="#">Simulations</a>
-							</li>
-							<!-- <li class="nav-item">
+      gtag("config", "UA-141893892-1");
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="flot/jquery.flot.min.js"></script> -->
+    <!-- <script language="javascript" type="text/javascript" src="flot/jquery.flot.axislabels.js"></script> -->
+  </head>
+
+  <body>
+    <!-- <script src="style.css"></script> -->
+    <header id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#">Felipe Ferrari</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link active" rel="section1" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="section2" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="section3" href="#">Simulations</a>
+              </li>
+              <!-- <li class="nav-item">
 								<a class="nav-link" rel="section4" href="#">Data Visualization</a>
 							</li> -->
-							<li class="nav-item">
-								<a class="nav-link" rel="section5" href="#">Contacts</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" rel="" href="#" onclick="openPDF();">My CV</a>
-								<!-- window.open("https://raw.githubusercontent.com/wiki/shiplab/vesseljs/files/open_6_DOF.pdf"); -->
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</header>
-		<canvas></canvas>
-		<section>
-			<div class="section1">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 offset-lg-6">
-							<h2>Hi, I am <b>Felipe Ferrari</b> and I want to <b>Revolutionize</b> Shipping Industry.</h2>
-							<!-- <h3>Discover how I can transform your business.</h3> -->
-							<p>Ship companies must adapt to 4th industrial revolution implementing the concepts of big data and digital visualization. However, they need professionals familiar with naval industry as well.</p>
-							<a href="#" class="btnD1 rounded learn-more">About Me</a>
-							<a href="#" class="btnD1 rounded play-pause visible"><i class="material-icons md-18">play_arrow</i></a>
-							<a href="#" class="btnD1 rounded play-pause invisible"><i class="material-icons md-18">pause</i></a>
-							<a target="_blank" href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street" class="btnD1 rounded learnVon">
-								<svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-									<path fill="#DCE8F2" d="M14.97,18.95L12.41,12.92C11.39,14.91 10.27,17 9.31,18.95C9.3,18.96 8.84,18.95 8.84,18.95C7.37,15.5 5.85,12.1 4.37,8.68C4.03,7.84 2.83,6.5 2,6.5C2,6.4 2,6.18 2,6.05H7.06V6.5C6.46,6.5 5.44,6.9 5.7,7.55C6.42,9.09 8.94,15.06 9.63,16.58C10.1,15.64 11.43,13.16 12,12.11C11.55,11.23 10.13,7.93 9.71,7.11C9.39,6.57 8.58,6.5 7.96,6.5C7.96,6.35 7.97,6.25 7.96,6.06L12.42,6.07V6.47C11.81,6.5 11.24,6.71 11.5,7.29C12.1,8.53 12.45,9.42 13,10.57C13.17,10.23 14.07,8.38 14.5,7.41C14.76,6.76 14.37,6.5 13.29,6.5C13.3,6.38 13.3,6.17 13.3,6.07C14.69,6.06 16.78,6.06 17.15,6.05V6.47C16.44,6.5 15.71,6.88 15.33,7.46L13.5,11.3C13.68,11.81 15.46,15.76 15.65,16.2L19.5,7.37C19.2,6.65 18.34,6.5 18,6.5C18,6.37 18,6.2 18,6.05L22,6.08V6.1L22,6.5C21.12,6.5 20.57,7 20.25,7.75C19.45,9.54 17,15.24 15.4,18.95C15.4,18.95 14.97,18.95 14.97,18.95Z" />
-								</svg>
-							</a>
-							<a target="_blank" href="https://github.com/ferrari212/vortice-induced-ilustration/tree/master" class="btnD1 rounded learnVon">
-								<svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-									<path fill="#DCE8F2" d="M20.38,8.53C20.54,8.13 21.06,6.54 20.21,4.39C20.21,4.39 18.9,4 15.91,6C14.66,5.67 13.33,5.62 12,5.62C10.68,5.62 9.34,5.67 8.09,6C5.1,3.97 3.79,4.39 3.79,4.39C2.94,6.54 3.46,8.13 3.63,8.53C2.61,9.62 2,11 2,12.72C2,19.16 6.16,20.61 12,20.61C17.79,20.61 22,19.16 22,12.72C22,11 21.39,9.62 20.38,8.53M12,19.38C7.88,19.38 4.53,19.19 4.53,15.19C4.53,14.24 5,13.34 5.8,12.61C7.14,11.38 9.43,12.03 12,12.03C14.59,12.03 16.85,11.38 18.2,12.61C19,13.34 19.5,14.23 19.5,15.19C19.5,19.18 16.13,19.38 12,19.38M8.86,13.12C8.04,13.12 7.36,14.12 7.36,15.34C7.36,16.57 8.04,17.58 8.86,17.58C9.69,17.58 10.36,16.58 10.36,15.34C10.36,14.11 9.69,13.12 8.86,13.12M15.14,13.12C14.31,13.12 13.64,14.11 13.64,15.34C13.64,16.58 14.31,17.58 15.14,17.58C15.96,17.58 16.64,16.58 16.64,15.34C16.64,14.11 16,13.12 15.14,13.12Z" />
-								</svg>
-							</a>
-							<a href="#" class="btnD1 rounded" onclick="openPDF();">MY CV</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="section2">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-3 d-none d-lg-block">
-							<br />
-							<div class="" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>Python</b><br>pandas<br>numpy<br>matplotlib<br>pandas">
-								<svg style="width: 100%; height: 70px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M19.14,7.5A2.86,2.86 0 0,1 22,10.36V14.14A2.86,2.86 0 0,1 19.14,17H12C12,17.39 12.32,17.96 12.71,17.96H17V19.64A2.86,2.86 0 0,1 14.14,22.5H9.86A2.86,2.86 0 0,1 7,19.64V15.89C7,14.31 8.28,13.04 9.86,13.04H15.11C16.69,13.04 17.96,11.76 17.96,10.18V7.5H19.14M14.86,19.29C14.46,19.29 14.14,19.59 14.14,20.18C14.14,20.77 14.46,20.89 14.86,20.89A0.71,0.71 0 0,0 15.57,20.18C15.57,19.59 15.25,19.29 14.86,19.29M4.86,17.5C3.28,17.5 2,16.22 2,14.64V10.86C2,9.28 3.28,8 4.86,8H12C12,7.61 11.68,7.04 11.29,7.04H7V5.36C7,3.78 8.28,2.5 9.86,2.5H14.14C15.72,2.5 17,3.78 17,5.36V9.11C17,10.69 15.72,11.96 14.14,11.96H8.89C7.31,11.96 6.04,13.24 6.04,14.82V17.5H4.86M9.14,5.71C9.54,5.71 9.86,5.41 9.86,4.82C9.86,4.23 9.54,4.11 9.14,4.11C8.75,4.11 8.43,4.23 8.43,4.82C8.43,5.41 8.75,5.71 9.14,5.71Z" />
-								</svg>
-							</div>
-							<br />
-							<div class="" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>JavaScript</b><br>React.js<br>D3.js<br>Canvas<br>React.js">
-								<svg style="width: 100%; height: 70px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z" />
-								</svg>
-							</div>
-							<br />
-							<!-- <p>
-              <svg style="width:100%;height:70px" viewBox="0 0 24 24">
-                <path fill="#011C40"
-                  d="M12,4.29C6.5,4.29 2,7.29 2,11C2,14.28 5.56,17 10.24,17.58V19.71H13.65V17.59C14.5,17.5 15.29,17.34 16.04,17.11L17.42,19.71H21.28L18.96,15.8C20.83,14.58 22,12.87 22,11C22,7.29 17.5,4.29 12,4.29V4.29M13.53,6.91C17.73,6.91 20.83,8.31 20.83,11.5C20.83,13.21 19.91,14.41 18.41,15.15C18.32,15.1 18.24,15.05 18.19,15C17.83,14.84 17.23,14.66 17.23,14.66C17.23,14.66 20.21,14.44 20.21,11.47C20.21,8.5 17.09,8.45 17.09,8.45H10.24V15.61C7.69,14.87 5.93,13.3 5.93,11.5C5.93,8.96 9.33,6.91 13.53,6.91M13.68,10.89H15.75C15.75,10.89 16.7,10.84 16.7,11.83C16.7,12.8 15.75,12.8 15.75,12.8H13.68V10.89M13.65,15.3H14.57C14.75,15.3 14.84,15.35 15,15.5C15.13,15.6 15.27,15.79 15.39,15.96C14.84,16.03 14.26,16.06 13.65,16.06V15.3Z" />
-              </svg>
-            </p> -->
-							<div class="" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>Data Base</b><br>mySql<br>MongoDB<br>SQL">
-								<svg style="width: 100%; height: 70px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
-								</svg>
-							</div>
-							<br />
-							<div class="" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>Git</b><br>GitHub<br>Terminal">
-								<svg style="width: 100%; height: 70px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
-								</svg>
-							</div>
-							<br />
-							<div class="" data-toggle="tooltip" data-placement="top" data-html="true" title="C Sharp<br>C++">
-								<svg style="width: 100%; height: 70px" viewBox="-10 0 80 80">
-									<circle fill="#011C40" xmlns="http://www.w3.org/2000/svg" class="cls-1" cx="32" cy="32" r="32" />
-									<!-- <path fill="#FFFF00" xmlns="http://www.w3.org/2000/svg" class="cls-2" d="M9.82,9A32,32,0,1,0,55,54.18Z" /> -->
-									<path fill="#dce8f2" xmlns="http://www.w3.org/2000/svg" class="cls-3" d="M30.43,43.55a14.78,14.78,0,0,1-7,1.48,11.23,11.23,0,0,1-8.61-3.46,12.78,12.78,0,0,1-3.23-9.09,13.39,13.39,0,0,1,3.64-9.77A12.35,12.35,0,0,1,24.49,19a14.8,14.8,0,0,1,5.94,1v3.15a12,12,0,0,0-6-1.51,9.17,9.17,0,0,0-7,2.9,10.93,10.93,0,0,0-2.7,7.75,10.4,10.4,0,0,0,2.52,7.34,8.58,8.58,0,0,0,6.62,2.73,12.42,12.42,0,0,0,6.57-1.69Z" />
-									<path fill="#dce8f2" xmlns="http://www.w3.org/2000/svg" class="cls-3" d="M52.76,26.46l-.4,1.86H47.76L46.66,33.6H51.6l-.47,1.86H46.29l-1.55,7H42.53l1.51-7H39.64l-1.48,7H36l1.48-7H32.84l.35-1.86h4.66l1.07-5.27H34.05l.37-1.86h4.87l1.48-7.07H43l-1.48,7.07h4.43l1.51-7.07h2.16l-1.48,7.07Zm-7.17,1.86H41.15L40,33.6h4.46Z" />
-									<!-- <path fill="#011C40" d="M302.553,0H10C4.477,0,0,4.478,0,10v292.553c0,5.522,4.477,10,10,10h292.553c5.523,0,10-4.478,10-10V10  C312.553,4.478,308.076,0,302.553,0z M122.031,193.288c-9.481,8.296-21.592,12.865-34.102,12.865  c-28.108,0-50.976-22.4-50.976-49.934c0-27.47,22.868-49.818,50.976-49.818c12.527,0,24.597,4.53,33.987,12.756  c3.874,3.392,4.263,9.283,0.87,13.156c-3.393,3.874-9.283,4.263-13.157,0.869c-5.988-5.245-13.695-8.135-21.7-8.135  c-17.827,0-32.33,13.983-32.33,31.172c0,17.251,14.503,31.286,32.33,31.286c7.992,0,15.742-2.931,21.822-8.251  c3.875-3.393,9.765-2.998,13.156,0.877C126.298,184.007,125.906,189.898,122.031,193.288z M185.951,165.6h-18.789v18.79  c0,5.149-4.174,9.323-9.324,9.323s-9.324-4.174-9.324-9.323V165.6h-18.788c-5.149,0-9.324-4.174-9.324-9.323  s4.174-9.323,9.324-9.323h18.788v-18.789c0-5.149,4.174-9.323,9.324-9.323s9.324,4.174,9.324,9.323v18.789h18.789  c5.149,0,9.324,4.174,9.324,9.323S191.101,165.6,185.951,165.6z M266.276,165.6h-18.789v18.79c0,5.149-4.174,9.323-9.324,9.323  c-5.149,0-9.324-4.174-9.324-9.323V165.6h-18.788c-5.149,0-9.324-4.174-9.324-9.323s4.174-9.323,9.324-9.323h18.788v-18.789  c0-5.149,4.174-9.323,9.324-9.323c5.149,0,9.324,4.174,9.324,9.323v18.789h18.789c5.149,0,9.324,4.174,9.324,9.323  S271.426,165.6,266.276,165.6z" /> -->
-								</svg>
-							</div>
-
-							<!-- <p style="text-align: center">Ship Design</p>
-            <div class="animation-bar-left">
-              <span id="waypoint-1-1" style="width:20%">
-                <div style="text-align: center; color: #DCE8F2">
-                  90%
-                </div>
-              </span>
+              <li class="nav-item">
+                <a class="nav-link" rel="section5" href="#">Contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="" href="#" onclick="openPDF();"
+                  >My CV</a
+                >
+                <!-- window.open("https://raw.githubusercontent.com/wiki/shiplab/vesseljs/files/open_6_DOF.pdf"); -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <canvas></canvas>
+    <section>
+      <div class="section1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <h2>
+                Hi, I am <b>Felipe Ferrari</b> and I want to
+                <b>Revolutionize</b> Shipping Industry.
+              </h2>
+              <!-- <h3>Discover how I can transform your business.</h3> -->
+              <p>
+                Ship companies must adapt to 4th industrial revolution
+                implementing the concepts of big data and digital visualization.
+                However, they need professionals familiar with naval industry as
+                well.
+              </p>
+              <a href="#" class="btnD1 rounded learn-more">About Me</a>
+              <a href="#" class="btnD1 rounded play-pause visible"
+                ><i class="material-icons md-18">play_arrow</i></a
+              >
+              <a href="#" class="btnD1 rounded play-pause invisible"
+                ><i class="material-icons md-18">pause</i></a
+              >
+              <a
+                target="_blank"
+                href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street"
+                class="btnD1 rounded learnVon"
+              >
+                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="#DCE8F2"
+                    d="M14.97,18.95L12.41,12.92C11.39,14.91 10.27,17 9.31,18.95C9.3,18.96 8.84,18.95 8.84,18.95C7.37,15.5 5.85,12.1 4.37,8.68C4.03,7.84 2.83,6.5 2,6.5C2,6.4 2,6.18 2,6.05H7.06V6.5C6.46,6.5 5.44,6.9 5.7,7.55C6.42,9.09 8.94,15.06 9.63,16.58C10.1,15.64 11.43,13.16 12,12.11C11.55,11.23 10.13,7.93 9.71,7.11C9.39,6.57 8.58,6.5 7.96,6.5C7.96,6.35 7.97,6.25 7.96,6.06L12.42,6.07V6.47C11.81,6.5 11.24,6.71 11.5,7.29C12.1,8.53 12.45,9.42 13,10.57C13.17,10.23 14.07,8.38 14.5,7.41C14.76,6.76 14.37,6.5 13.29,6.5C13.3,6.38 13.3,6.17 13.3,6.07C14.69,6.06 16.78,6.06 17.15,6.05V6.47C16.44,6.5 15.71,6.88 15.33,7.46L13.5,11.3C13.68,11.81 15.46,15.76 15.65,16.2L19.5,7.37C19.2,6.65 18.34,6.5 18,6.5C18,6.37 18,6.2 18,6.05L22,6.08V6.1L22,6.5C21.12,6.5 20.57,7 20.25,7.75C19.45,9.54 17,15.24 15.4,18.95C15.4,18.95 14.97,18.95 14.97,18.95Z"
+                  />
+                </svg>
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/ferrari212/vortice-induced-ilustration/tree/master"
+                class="btnD1 rounded learnVon"
+              >
+                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="#DCE8F2"
+                    d="M20.38,8.53C20.54,8.13 21.06,6.54 20.21,4.39C20.21,4.39 18.9,4 15.91,6C14.66,5.67 13.33,5.62 12,5.62C10.68,5.62 9.34,5.67 8.09,6C5.1,3.97 3.79,4.39 3.79,4.39C2.94,6.54 3.46,8.13 3.63,8.53C2.61,9.62 2,11 2,12.72C2,19.16 6.16,20.61 12,20.61C17.79,20.61 22,19.16 22,12.72C22,11 21.39,9.62 20.38,8.53M12,19.38C7.88,19.38 4.53,19.19 4.53,15.19C4.53,14.24 5,13.34 5.8,12.61C7.14,11.38 9.43,12.03 12,12.03C14.59,12.03 16.85,11.38 18.2,12.61C19,13.34 19.5,14.23 19.5,15.19C19.5,19.18 16.13,19.38 12,19.38M8.86,13.12C8.04,13.12 7.36,14.12 7.36,15.34C7.36,16.57 8.04,17.58 8.86,17.58C9.69,17.58 10.36,16.58 10.36,15.34C10.36,14.11 9.69,13.12 8.86,13.12M15.14,13.12C14.31,13.12 13.64,14.11 13.64,15.34C13.64,16.58 14.31,17.58 15.14,17.58C15.96,17.58 16.64,16.58 16.64,15.34C16.64,14.11 16,13.12 15.14,13.12Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="btnD1 rounded" onclick="openPDF();">MY CV</a>
             </div>
-            <p style="text-align: center">Ship Construction</p>
-            <div class="animation-bar-left">
-              <span id="waypoint-1-2" style="width:20%">
-                <div style="text-align: center; color: #DCE8F2">
-                  85%
-                </div>
-              </span>
-            </div>
-            <p style="text-align: center">Mooring Planning</p>
-            <div class="animation-bar-left">
-              <span id="waypoint-1-3" style="width:20%">
-                <div style="text-align: center; color: #DCE8F2">
-                  50%
-                </div>
-              </span>
-            </div>
-            <p style="text-align: center">Vessels Hydrodynamics</p>
-            <div class="animation-bar-left">
-              <span id="waypoint-1-4" style="width:20%">
-                <div style="text-align: center; color: #DCE8F2">
-                  55%
-                </div>
-              </span>
-            </div>
-            <p style="text-align: center">Naval Rules and Regulations</p>
-            <div class="animation-bar-left">
-              <span id="waypoint-1-5" style="width:20%">
-                <div style="text-align: center; color: #DCE8F2">
-                  75%
-                </div>
-              </span>
-            </div> -->
-						</div>
+          </div>
+        </div>
+      </div>
 
-						<div class="col-lg-4">
-							<img src="images/myphoto.png" class="mx-auto d-block profile-image" alt="..." height="421" />
-						</div>
+      <div class="section2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 d-none d-lg-block">
+              <br />
+              <br />
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 d-none d-lg-block">
+                    <div
+                      class=""
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-html="true"
+                      title="<b>Python</b><br>pandas<br>numpy<br>matplotlib<br>pandas"
+                    >
+                      <svg
+                        style="width: 100%; height: 100px"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#011C40"
+                          d="M19.14,7.5A2.86,2.86 0 0,1 22,10.36V14.14A2.86,2.86 0 0,1 19.14,17H12C12,17.39 12.32,17.96 12.71,17.96H17V19.64A2.86,2.86 0 0,1 14.14,22.5H9.86A2.86,2.86 0 0,1 7,19.64V15.89C7,14.31 8.28,13.04 9.86,13.04H15.11C16.69,13.04 17.96,11.76 17.96,10.18V7.5H19.14M14.86,19.29C14.46,19.29 14.14,19.59 14.14,20.18C14.14,20.77 14.46,20.89 14.86,20.89A0.71,0.71 0 0,0 15.57,20.18C15.57,19.59 15.25,19.29 14.86,19.29M4.86,17.5C3.28,17.5 2,16.22 2,14.64V10.86C2,9.28 3.28,8 4.86,8H12C12,7.61 11.68,7.04 11.29,7.04H7V5.36C7,3.78 8.28,2.5 9.86,2.5H14.14C15.72,2.5 17,3.78 17,5.36V9.11C17,10.69 15.72,11.96 14.14,11.96H8.89C7.31,11.96 6.04,13.24 6.04,14.82V17.5H4.86M9.14,5.71C9.54,5.71 9.86,5.41 9.86,4.82C9.86,4.23 9.54,4.11 9.14,4.11C8.75,4.11 8.43,4.23 8.43,4.82C8.43,5.41 8.75,5.71 9.14,5.71Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-none d-lg-block">
+                    <div
+                      class=""
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-html="true"
+                      title="<b>JavaScript</b><br>React.js<br>D3.js<br>Canvas<br>React.js"
+                    >
+                      <svg
+                        style="width: 100%; height: 100px"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#011C40"
+                          d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-lg-6 d-none d-lg-block">
+                    <div
+                      class=""
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-html="true"
+                      title="<b>Data Base</b><br>mySql<br>MongoDB<br>SQL"
+                    >
+                      <svg
+                        style="width: 100%; height: 100px"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#011C40"
+                          d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-none d-lg-block">
+                    <div
+                      class=""
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-html="true"
+                      title="<b>Git</b><br>GitHub<br>Terminal"
+                    >
+                      <svg
+                        style="width: 100%; height: 100px"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#011C40"
+                          d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <img
+                src="images/myphoto_two.jpg"
+                class="mx-auto d-block profile-image"
+                alt="..."
+                height="300"
+              />
+            </div>
+          </div>
 
-						<div class="col-sm-4 d-none d-lg-block">
+          <!-- <div class="col-sm-4 d-none d-lg-block">
 							<p style="text-align: center">Front-end Development</p>
 							<div class="animation-bar-right">
 								<span id="waypoint-2-1" style="width: 20%">
@@ -211,44 +277,44 @@
 									<div style="text-align: center; color: #dce8f2">50%</div>
 								</span>
 							</div>
-						</div>
-					</div>
+						</div> -->
+        </div>
 
-					<div class="row d-lg-none">
-						<div class="col-sm-6">
-							<p style="text-align: center">Ship Design</p>
-							<div class="animation-bar-left">
-								<span id="waypoint-1-1" style="width: 90%; margin-left: 10%">
-									<div style="text-align: center; color: #dce8f2">90%</div>
-								</span>
-							</div>
-							<p style="text-align: center">Ship Construction</p>
-							<div class="animation-bar-left">
-								<span id="waypoint-1-2" style="width: 85%; margin-left: 15%">
-									<div style="text-align: center; color: #dce8f2">85%</div>
-								</span>
-							</div>
-							<p style="text-align: center">Mooring Planning</p>
-							<div class="animation-bar-left">
-								<span id="waypoint-1-3" style="width: 50%; margin-left: 50%">
-									<div style="text-align: center; color: #dce8f2">50%</div>
-								</span>
-							</div>
-							<p style="text-align: center">Vessels Hydrodynamics</p>
-							<div class="animation-bar-left">
-								<span id="waypoint-1-4" style="width: 55%; margin-left: 45%">
-									<div style="text-align: center; color: #dce8f2">55%</div>
-								</span>
-							</div>
-							<p style="text-align: center">Naval Rules and Regulations</p>
-							<div class="animation-bar-left">
-								<span id="waypoint-1-5" style="width: 75%; margin-left: 25%">
-									<div style="text-align: center; color: #dce8f2">75%</div>
-								</span>
-							</div>
-						</div>
+        <div class="row d-lg-none">
+          <div class="col-sm-6">
+            <p style="text-align: center">Ship Design</p>
+            <div class="animation-bar-left">
+              <span id="waypoint-1-1" style="width: 90%; margin-left: 10%">
+                <div style="text-align: center; color: #dce8f2">90%</div>
+              </span>
+            </div>
+            <p style="text-align: center">Ship Construction</p>
+            <div class="animation-bar-left">
+              <span id="waypoint-1-2" style="width: 85%; margin-left: 15%">
+                <div style="text-align: center; color: #dce8f2">85%</div>
+              </span>
+            </div>
+            <p style="text-align: center">Mooring Planning</p>
+            <div class="animation-bar-left">
+              <span id="waypoint-1-3" style="width: 50%; margin-left: 50%">
+                <div style="text-align: center; color: #dce8f2">50%</div>
+              </span>
+            </div>
+            <p style="text-align: center">Vessels Hydrodynamics</p>
+            <div class="animation-bar-left">
+              <span id="waypoint-1-4" style="width: 55%; margin-left: 45%">
+                <div style="text-align: center; color: #dce8f2">55%</div>
+              </span>
+            </div>
+            <p style="text-align: center">Naval Rules and Regulations</p>
+            <div class="animation-bar-left">
+              <span id="waypoint-1-5" style="width: 75%; margin-left: 25%">
+                <div style="text-align: center; color: #dce8f2">75%</div>
+              </span>
+            </div>
+          </div>
 
-						<div class="col-sm-6">
+          <!-- <div class="col-sm-6">
 							<p style="text-align: center">Front-end Development</p>
 							<div class="animation-bar-right">
 								<span id="waypoint-2-1" style="width: 90%">
@@ -279,133 +345,357 @@
 									<div style="text-align: center; color: #dce8f2">50%</div>
 								</span>
 							</div>
-						</div>
-					</div>
+						</div> -->
+        </div>
 
-					<div class="row">
-						<div class="col-md-10 offset-md-1">
-							<p>
-								A Professional able to manage a broad range of skills from Ship Design to Data Analysis. Currently employed as Digital Lead Engineer in
-								<b><a style="text-decoration: none; color: #a60d0d" target="_blank" href="https://www.dnv.com/">Det Norske Veritas (DNV)</a></b> responsible for applying data engineering and machine learning knowledge into the structural engineering context. Contributor of open library <b><a style="text-decoration: none; color: #a60d0d" target="_blank" href="https://shiplab.github.io/vesseljs/">Vessel.js</a></b> for <b><a style="text-decoration: none; color: #a60d0d" target="_blank" href="http://www.shiplab.hials.org/">ShipLab</a></b
-								>.
-							</p>
-						</div>
-					</div>
-				</div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 offset-md-1">
+            <p>
+              A Professional able to manage a broad range of skills from Ship
+              Design to Data Analysis. Currently employed as Digital Lead
+              Engineer in
+              <b
+                ><a
+                  style="text-decoration: none; color: #a60d0d"
+                  target="_blank"
+                  href="https://www.dnv.com/"
+                  >Det Norske Veritas (DNV)</a
+                ></b
+              >
+              responsible for applying data engineering and machine learning
+              knowledge into the structural engineering context. Contributor of
+              open library
+              <b
+                ><a
+                  style="text-decoration: none; color: #a60d0d"
+                  target="_blank"
+                  href="https://shiplab.github.io/vesseljs/"
+                  >Vessel.js</a
+                ></b
+              >
+              for
+              <b
+                ><a
+                  style="text-decoration: none; color: #a60d0d"
+                  target="_blank"
+                  href="http://www.shiplab.hials.org/"
+                  >ShipLab</a
+                ></b
+              >.
+            </p>
+          </div>
+        </div>
 
-				<h6 class="reference" style="color: #dce8f2">
-					Photo by <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/photos/QPNpXcQfdLA"> Cristina Gottardi</a></b> on <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).
-				</h6>
-			</div>
+        <h6 class="reference" style="color: #dce8f2">
+          Photo by
+          <b
+            ><a
+              style="text-decoration: none; color: #dce8f2"
+              target="_blank"
+              href="https://unsplash.com/photos/QPNpXcQfdLA"
+            >
+              Cristina Gottardi</a
+            ></b
+          >
+          on
+          <b
+            ><a
+              style="text-decoration: none; color: #dce8f2"
+              target="_blank"
+              href="https://unsplash.com/"
+              >Unsplash</a
+            ></b
+          >
+          (adapted).
+        </h6>
+      </div>
 
-			<div class="section3">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-7">
-							<div class="card text-center">
-								<div class="card-header">
-									<ul class="nav nav-tabs card-header-tabs">
-										<li class="nav-item">
-											<a class="nav-link expertises active-video" rel="video-maneuvering" href="javascript:void(0)">Maneuvering</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link expertises" rel="video-platform" href="javascript:void(0)">Plat.</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link expertises" rel="video-epoch" href="javascript:void(0)">Epoch</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link expertises" rel="video-Gunnerus" href="javascript:void(0)">Vis.</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link expertises" rel="video-guide" href="javascript:void(0)">Guide</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link expertises" rel="video-simulation" href="javascript:void(0)">Mooring</a>
-										</li>
-									</ul>
-								</div>
-								<div class="card-body" style="height: 450px">
-									<a style="text-decoration: none" target="_blank" class="video-maneuvering" href="https://shiplab.github.io/openbridge/">
-										<!-- <h5 class="card-title">Maneuvering</h5> -->
-										<img class="active" width="90%" src="images/man.jpg" />
-										<br />
-										<h7>Maneuvering simulation using differential equations solvers to calculate a realistic response from the user configuration.</h7>
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-platform invisible" href="https://twinship.netlify.app/">
-										<h5 class="card-title">Twin ship platform</h5>
-										<img class="active" width="80%" src="images/collaboration_diagram.jpg" />
-										<br />
-										<h7>Platform for ship analysis, simulation and data storage from the conceptual design to operation.</h7>
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-epoch invisible" href="https://shiplab.github.io/vesseljs/examples/epoch.html">
-										<h5 class="card-title">Epoch visualization</h5>
-										<img class="active" width="100%" src="images/epoch.jpg" />
-										<h7>Visualization of an offshore epoch for carbon dioxide trapping to elucidate the main points in the operation, with the possibility for user parameters configuration.</h7>
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-Gunnerus invisible" href="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html">
-										<h5 class="card-title">Gunnerus Visualization</h5>
-										<img class="active" width="70%" src="images/gunnerus_model.jpg" />
-										<br />
-										<h7>A visualization for NTNU University ship Gunnerus. The view can be changed between detailed and sketch, allowing the interaction with the main components.</h7>
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-guide invisible" href="https://observablehq.com/@ferrari212/from-the-hull-to-simulation-a-vessel-js-tutorial?collection=@ferrari212/from-hull-to-simulation">
-										<h5 class="card-title">Vessel.js Gunnerus tutorial guide</h5>
-										<img class="active" width="90%" src="images/Gunnerus_starboard_su.jpg" />
-										<br />
-										<h7>A complete visual and interactive guide which explain how to use vessel.js library for creating the digital models. The guide shows the steps from the general arrangement and offset table to a maneuverability simulation of the ship.</h7>
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-simulation invisible" href="https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave.html">
-										<h5 class="card-title">Simulation of Mooring System using Vessel.js</h5>
-										<img class="active" height="350" src="images/MooringLine.gif" />
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-6DOF invisible" href="https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave.html">
-										<h5 class="card-title">6DOF free body model</h5>
-										<img class="active" height="350" src="images/Ship_in_Dynamical.gif" />
-									</a>
-									<a style="text-decoration: none" target="_blank" class="video-Catenary invisible" href="https://ferrari212.github.io/mooring/">
-										<h5 class="card-title">Catenary 2D modeling</h5>
-										<img class="active" width="100%" src="images/Mooring_Calculatio.jpg" />
-									</a>
-									<!-- <a style="text-decoration: none;" target="_blank" class="video-construction invisible" href="https://www.facebook.com/frank.d.rodrigues/videos/278762059727194/?t=1">
-										<h5 class="card-title">Construction of Barge in Beconal Shipyard</h5>
-										<video height="300" src="images/constructionvideo.mp4" controls></video>
-										<video style="border:solid;" class="active" height="250" src="images/constructionvideo.mp4"> </a
-									> -->
-								</div>
-							</div>
-						</div>
+      <div class="section3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises active-video"
+                        rel="video-maneuvering"
+                        href="javascript:void(0)"
+                        >Maneuvering</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises"
+                        rel="video-platform"
+                        href="javascript:void(0)"
+                        >Plat.</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises"
+                        rel="video-epoch"
+                        href="javascript:void(0)"
+                        >Epoch</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises"
+                        rel="video-Gunnerus"
+                        href="javascript:void(0)"
+                        >Vis.</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises"
+                        rel="video-guide"
+                        href="javascript:void(0)"
+                        >Guide</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link expertises"
+                        rel="video-simulation"
+                        href="javascript:void(0)"
+                        >Mooring</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body" style="height: 450px">
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-maneuvering"
+                    href="https://shiplab.github.io/openbridge/"
+                  >
+                    <!-- <h5 class="card-title">Maneuvering</h5> -->
+                    <img class="active" width="90%" src="images/man.jpg" />
+                    <br />
+                    <h7
+                      >Maneuvering simulation using differential equations
+                      solvers to calculate a realistic response from the user
+                      configuration.</h7
+                    >
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-platform invisible"
+                    href="https://twinship.netlify.app/"
+                  >
+                    <h5 class="card-title">Twin ship platform</h5>
+                    <img
+                      class="active"
+                      width="80%"
+                      src="images/collaboration_diagram.jpg"
+                    />
+                    <br />
+                    <h7
+                      >Platform for ship analysis, simulation and data storage
+                      from the conceptual design to operation.</h7
+                    >
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-epoch invisible"
+                    href="https://shiplab.github.io/vesseljs/examples/epoch.html"
+                  >
+                    <h5 class="card-title">Epoch visualization</h5>
+                    <img class="active" width="100%" src="images/epoch.jpg" />
+                    <h7
+                      >Visualization of an offshore epoch for carbon dioxide
+                      trapping to elucidate the main points in the operation,
+                      with the possibility for user parameters
+                      configuration.</h7
+                    >
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-Gunnerus invisible"
+                    href="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html"
+                  >
+                    <h5 class="card-title">Gunnerus Visualization</h5>
+                    <img
+                      class="active"
+                      width="70%"
+                      src="images/gunnerus_model.jpg"
+                    />
+                    <br />
+                    <h7
+                      >A visualization for NTNU University ship Gunnerus. The
+                      view can be changed between detailed and sketch, allowing
+                      the interaction with the main components.</h7
+                    >
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-guide invisible"
+                    href="https://observablehq.com/@ferrari212/from-the-hull-to-simulation-a-vessel-js-tutorial?collection=@ferrari212/from-hull-to-simulation"
+                  >
+                    <h5 class="card-title">
+                      Vessel.js Gunnerus tutorial guide
+                    </h5>
+                    <img
+                      class="active"
+                      width="90%"
+                      src="images/Gunnerus_starboard_su.jpg"
+                    />
+                    <br />
+                    <h7
+                      >A complete visual and interactive guide which explain how
+                      to use vessel.js library for creating the digital models.
+                      The guide shows the steps from the general arrangement and
+                      offset table to a maneuverability simulation of the
+                      ship.</h7
+                    >
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-simulation invisible"
+                    href="https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave.html"
+                  >
+                    <h5 class="card-title">
+                      Simulation of Mooring System using Vessel.js
+                    </h5>
+                    <img
+                      class="active"
+                      height="350"
+                      src="images/MooringLine.gif"
+                    />
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-6DOF invisible"
+                    href="https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave.html"
+                  >
+                    <h5 class="card-title">6DOF free body model</h5>
+                    <img
+                      class="active"
+                      height="350"
+                      src="images/Ship_in_Dynamical.gif"
+                    />
+                  </a>
+                  <a
+                    style="text-decoration: none"
+                    target="_blank"
+                    class="video-Catenary invisible"
+                    href="https://ferrari212.github.io/mooring/"
+                  >
+                    <h5 class="card-title">Catenary 2D modeling</h5>
+                    <img
+                      class="active"
+                      width="100%"
+                      src="images/Mooring_Calculatio.jpg"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-						<!-- Insert this part -->
-						<!-- <a>
-            <img style="border:solid;" class="active" height="400" src="images/Ship_in_Ocean_heave_only.gif">
-          </a> -->
+            <div class="col-lg-5">
+              <h2>Practical expertise in Maritime Simulations</h2>
+              <p>
+                My portfolio consists of several simulations and visualizations
+                applications that is only possible thanks to my broad range of
+                skills. On the left side can be conferred several applications
+                examples I developed with my teammates in
+                <a
+                  style="text-decoration: none; color: red"
+                  target="_blank"
+                  href="http://www.shiplab.hials.org/"
+                  >ShipLab</a
+                >.
+              </p>
+              <br />
 
-						<div class="col-lg-5">
-							<h2>Practical expertise in Maritime Simulations</h2>
-							<p>My portfolio consists of several simulations and visualizations applications that is only possible thanks to my broad range of skills. On the left side can be conferred several applications examples I developed with my teammates in <a style="text-decoration: none; color: red" target="_blank" href="http://www.shiplab.hials.org/">ShipLab</a>.</p>
-							<br />
+              <div
+                style="
+                  padding: 25px 0 25px;
+                  background-color: rgba(220, 232, 242, 0.55);
+                "
+                class="row"
+              >
+                <div
+                  class="col-md-4"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  data-html="true"
+                  title="Master Student in Ship Design <br> NTNU, Norway"
+                >
+                  <img
+                    class="mx-auto d-block"
+                    src="images/brand_NTNU.svg"
+                    style="height: 50px"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="col-md-4"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  data-html="true"
+                  title="Bachelor in Naval Architecture and Ocean Engineering <br> University of São Paulo, Brazil"
+                >
+                  <img
+                    class="mx-auto d-block"
+                    src="images/brand_USP.svg"
+                    style="height: 45px"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="col-md-4"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  data-html="true"
+                  title="Exchange Studies in Naval Architecture <br> ELAP Scholarship Alumni <br> Memorial University, Canada"
+                >
+                  <img
+                    class="mx-auto d-block"
+                    src="images/brand_MUN.svg"
+                    style="height: 50px"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-							<div style="padding: 25px 0 25px; background-color: rgba(220, 232, 242, 0.55)" class="row">
-								<div class="col-md-4" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Master Student in Ship Design <br> NTNU, Norway">
-									<img class="mx-auto d-block" src="images/brand_NTNU.svg" style="height: 50px" alt="" />
-								</div>
-								<div class="col-md-4" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Bachelor in Naval Architecture and Ocean Engineering <br> University of São Paulo, Brazil">
-									<img class="mx-auto d-block" src="images/brand_USP.svg" style="height: 45px" alt="" />
-								</div>
-								<div class="col-md-4" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Exchange Studies in Naval Architecture <br> ELAP Scholarship Alumni <br> Memorial University, Canada">
-									<img class="mx-auto d-block" src="images/brand_MUN.svg" style="height: 50px" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<h6 class="reference">
-					Photo by <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/photos/5Rgr_zI7pBw">Dorian Mongel</a></b> on <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).
-				</h6>
-			</div>
-			<!-- 
+        <h6 class="reference">
+          Photo by
+          <b
+            ><a
+              style="text-decoration: none; color: #dce8f2"
+              target="_blank"
+              href="https://unsplash.com/photos/5Rgr_zI7pBw"
+              >Dorian Mongel</a
+            ></b
+          >
+          on
+          <b
+            ><a
+              style="text-decoration: none; color: #dce8f2"
+              target="_blank"
+              href="https://unsplash.com/"
+              >Unsplash</a
+            ></b
+          >
+          (adapted).
+        </h6>
+      </div>
+      <!-- 
     <div class="section4">
 
       <div class="container">
@@ -463,72 +753,118 @@
             href="https://unsplash.com/">Unsplash</a></b> (adapted).</h6>
     </div> -->
 
-			<div class="section5">
-				<!-- <div id="contact" class="container-fluid"> -->
-				<div id="contact">
-					<div class="row">
-						<div class="col-12">
-							<h2>Contacts</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<a style="text-decoration: none" target="_blank" href="https://www.linkedin.com/in/ferrari212/">
-								<p>
-									<svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-										<path fill="#011C40" d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z" />
-									</svg>
-									/in/ferrari212
-								</p>
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<a style="text-decoration: none" target="_blank" href="https://github.com/ferrari212">
-								<p>
-									<svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-										<path fill="#011C40" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H14.56C14.24,20.93 14.23,20.32 14.23,20.11L14.24,17.64C14.24,16.8 13.95,16.25 13.63,15.97C15.64,15.75 17.74,15 17.74,11.53C17.74,10.55 17.39,9.74 16.82,9.11C16.91,8.89 17.22,7.97 16.73,6.73C16.73,6.73 15.97,6.5 14.25,7.66C13.53,7.46 12.77,7.36 12,7.35C11.24,7.36 10.46,7.46 9.75,7.66C8.03,6.5 7.27,6.73 7.27,6.73C6.78,7.97 7.09,8.89 7.18,9.11C6.61,9.74 6.26,10.55 6.26,11.53C6.26,15 8.36,15.75 10.36,16C10.1,16.2 9.87,16.6 9.79,17.18C9.27,17.41 7.97,17.81 7.17,16.43C7.17,16.43 6.69,15.57 5.79,15.5C5.79,15.5 4.91,15.5 5.73,16.05C5.73,16.05 6.32,16.33 6.73,17.37C6.73,17.37 7.25,19.12 9.76,18.58L9.77,20.11C9.77,20.32 9.75,20.93 9.43,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" />
-									</svg>
-									/ferrari212
-								</p>
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<p>
-								<svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-								</svg>
-								felipe.oliveira@ntnu.no
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<p>
-								<svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-									<path fill="#011C40" d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
-								</svg>
-								+47 462 73 655
-							</p>
-						</div>
-					</div>
+      <div class="section5">
+        <!-- <div id="contact" class="container-fluid"> -->
+        <div id="contact">
+          <div class="row">
+            <div class="col-12">
+              <h2>Contacts</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <a
+                style="text-decoration: none"
+                target="_blank"
+                href="https://www.linkedin.com/in/ferrari212/"
+              >
+                <p>
+                  <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
+                    <path
+                      fill="#011C40"
+                      d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"
+                    />
+                  </svg>
+                  /in/ferrari212
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <a
+                style="text-decoration: none"
+                target="_blank"
+                href="https://github.com/ferrari212"
+              >
+                <p>
+                  <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
+                    <path
+                      fill="#011C40"
+                      d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H14.56C14.24,20.93 14.23,20.32 14.23,20.11L14.24,17.64C14.24,16.8 13.95,16.25 13.63,15.97C15.64,15.75 17.74,15 17.74,11.53C17.74,10.55 17.39,9.74 16.82,9.11C16.91,8.89 17.22,7.97 16.73,6.73C16.73,6.73 15.97,6.5 14.25,7.66C13.53,7.46 12.77,7.36 12,7.35C11.24,7.36 10.46,7.46 9.75,7.66C8.03,6.5 7.27,6.73 7.27,6.73C6.78,7.97 7.09,8.89 7.18,9.11C6.61,9.74 6.26,10.55 6.26,11.53C6.26,15 8.36,15.75 10.36,16C10.1,16.2 9.87,16.6 9.79,17.18C9.27,17.41 7.97,17.81 7.17,16.43C7.17,16.43 6.69,15.57 5.79,15.5C5.79,15.5 4.91,15.5 5.73,16.05C5.73,16.05 6.32,16.33 6.73,17.37C6.73,17.37 7.25,19.12 9.76,18.58L9.77,20.11C9.77,20.32 9.75,20.93 9.43,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z"
+                    />
+                  </svg>
+                  /ferrari212
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
+                  <path
+                    fill="#011C40"
+                    d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                  />
+                </svg>
+                felipe.ferrari@dnv.com
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
+                  <path
+                    fill="#011C40"
+                    d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
+                  />
+                </svg>
+                +47 462 73 655
+              </p>
+            </div>
+          </div>
 
-					<div class="col-6 offset-6 is-mobile">
-						<div class="row">
-							<h6 class="reference" style="left: 50vw">
-								Photo by <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/photos/p-_RJY6hN3E">Tomas Williams </a></b> on <b><a style="text-decoration: none; color: #dce8f2" target="_blank" href="https://unsplash.com/">Unsplash</a></b> (adapted).
-							</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-		<script src="index.js"></script>
-	</body>
+          <div class="col-6 offset-6 is-mobile">
+            <div class="row">
+              <h6 class="reference" style="left: 50vw">
+                Photo by
+                <b
+                  ><a
+                    style="text-decoration: none; color: #dce8f2"
+                    target="_blank"
+                    href="https://unsplash.com/photos/p-_RJY6hN3E"
+                    >Tomas Williams
+                  </a></b
+                >
+                on
+                <b
+                  ><a
+                    style="text-decoration: none; color: #dce8f2"
+                    target="_blank"
+                    href="https://unsplash.com/"
+                    >Unsplash</a
+                  ></b
+                >
+                (adapted).
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
