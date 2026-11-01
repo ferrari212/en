@@ -29,10 +29,10 @@ main > section { position: relative; }
 .btnD1:hover { background: white; color: var(--navy); text-decoration: none; }
 .btnD1:hover path { fill: var(--navy); }
 .section2, .section3 { padding: 4rem 0 2rem; background-position: center; background-size: cover; }
-.section2 { background-image: linear-gradient(rgba(220,232,242,.94),rgba(220,232,242,.94)),url('images/background2.jpg'); }
+.section2 { background-image: linear-gradient(rgba(220,232,242,.60),rgba(220,232,242,.60)),url('images/background2.jpg'); }
 .profile-image { display: block; max-width: 100%; height: auto; max-height: 350px; margin: 0 auto 2rem; border: 3px solid var(--navy); border-radius: 25px; }
 .section2 > .row { margin-left: 0; margin-right: 0; padding: 0 1rem; }
-.section2 p { text-align: left; }
+.section2 p { text-align: left; background: rgba(220,232,242,.90); padding: 1rem; border-radius: 12px; }
 .section3 { color: var(--paper); background-image: linear-gradient(rgba(1,28,64,.94),rgba(1,28,64,.94)),url('images/background3.jpg'); }
 .section3 h2 { margin-top: 1.5rem; }
 .card { color: var(--navy); margin-bottom: 1rem; }
@@ -59,6 +59,9 @@ main > section { position: relative; }
   .section3 h2 { margin-top: 1rem; }
   .card-body { min-height: 0; }
   #contact { width: 100%; }
+}
+@media (max-width: 575px) {
+  .profile-image { max-height: 280px; max-width: 74vw; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -55,7 +55,7 @@ var simulation1 = function () {
 		} else {
 			this.x = innerWidth / 4
 			this.y = (3 * innerHeight) / 4
-			this.radius = 75
+			this.radius = Math.min(40, Math.round(canvas.width * 0.085))
 			radius = 2
 			this.U = 1
 		}
