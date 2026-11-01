@@ -1,0 +1,23 @@
+{
+  "title": "Ship manoeuvring in the browser",
+  "category": "Interactive simulation",
+  "summary": "Explore a vessel’s response to control inputs through a browser-based numerical model.",
+  "image": "/images/man.jpg",
+  "tags": [
+    "JavaScript",
+    "Numerical modelling",
+    "Vessel.js"
+  ],
+  "contribution": "Developed browser-based navigation and vessel simulation tools as part of collaborative NTNU / ShipLab work.",
+  "links": [
+    {
+      "label": "Open demonstration",
+      "url": "https://shiplab.github.io/openbridge/index.html"
+    },
+    {
+      "label": "Explore source",
+      "url": "https://github.com/shiplab/openbridge"
+    }
+  ],
+  "slug": "ship-manoeuvring"
+}

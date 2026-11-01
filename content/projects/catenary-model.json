@@ -1,0 +1,23 @@
+{
+  "title": "A catenary model for mooring lines",
+  "category": "Open-source model",
+  "summary": "Explore the geometry of a hanging mooring line between reference points.",
+  "image": "",
+  "tags": [
+    "JavaScript",
+    "Catenary geometry",
+    "Plotting"
+  ],
+  "contribution": "Authored the public mooring demonstration, credited to Felipe Ferrari de Oliveira in its interface.",
+  "links": [
+    {
+      "label": "Open demonstration",
+      "url": "https://ferrari212.github.io/mooring/"
+    },
+    {
+      "label": "Explore source",
+      "url": "https://github.com/ferrari212/mooring"
+    }
+  ],
+  "slug": "catenary-model"
+}
