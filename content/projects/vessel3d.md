@@ -10,6 +10,6 @@ My commits include the live editor, linking drag controls to ship calculations, 
 The library builds on JavaScript and Three.js. It accepts hull data in the Vessel.js format and includes basic hydrostatics and stability functionality. A scene can combine a hull, compartments, an ocean, and coordinate helpers.
 
 ## Demonstrated capability
-The default editor example builds and renders a conceptual vessel from code. The library is an early-stage conceptual modelling tool; the presence of stability calculations does not establish certification or suitability for design approval.
+The default editor example builds and renders a conceptual vessel from code. The library provides an early-stage environment for conceptual modelling and exploration.
 
 The [Gunnerus visualization](/projects/gunnerus-visualization/) shows a related use of browser-based vessel models in the wider ShipLab work.
