@@ -102,7 +102,8 @@ def build(output, posts_dir, include_drafts=False):
     generated = {}
     def page(path, body, title, description, active='', image='/images/optimized/Gunnerus_starboard_su.webp', extra_head='', article=False):
         filename = path.lstrip('/') + 'index.html' if path.endswith('/') else path.lstrip('/')
-        generated[filename] = layout(body, title, description, path, active, image or '/images/optimized/Gunnerus_starboard_su.webp', extra_head, article)
+        html = layout(body, title, description, path, active, image or '/images/optimized/Gunnerus_starboard_su.webp', extra_head, article)
+        generated[filename] = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'
 
     work = projects()
     writing = posts(posts_dir, include_drafts)
