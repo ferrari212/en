@@ -1,486 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Felipe Ferrari — engineering, numerical simulation, maritime visualization, and data analysis. Explore projects and interactive demonstrations." />
-    <title>Felipe Ferrari</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-141893892-1"
-    ></script>
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-141893892-1");
-    </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Engineering models, software &amp; maritime data · Felipe Ferrari</title>
+    <meta name="description" content="Felipe Ferrari de Oliveira — naval and structural engineer building scientific software, maritime simulations, and data applications. Developing a specialization in applied AI." />
+    <meta name="theme-color" content="#295773" />
+    <link rel="canonical" href="https://shiptodata.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ship to Data · Felipe Ferrari" />
+    <meta property="og:title" content="Engineering models, software &amp; maritime data · Felipe Ferrari" />
+    <meta property="og:description" content="Felipe Ferrari de Oliveira — naval and structural engineer building scientific software, maritime simulations, and data applications. Developing a specialization in applied AI." />
+    <meta property="og:url" content="https://shiptodata.com/" />
+    <meta property="og:image" content="https://shiptodata.com/images/optimized/Gunnerus_starboard_su.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+  
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/index.js" defer></script>
   </head>
-
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <header id="header">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#section1">Felipe Ferrari</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-lg-auto">
-              <li class="nav-item">
-                <a class="nav-link active" rel="section1" href="#section1"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" rel="section2" href="#section2">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" rel="section3" href="#section3">Simulations</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" rel="section5" href="#section5">Contacts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Felipe_CV.pdf" target="_blank" rel="noopener noreferrer"
-                  >My CV</a
-                >
-
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Felipe Ferrari — home"
+          ><span class="brand-mark" aria-hidden="true">f<span>.</span></span
+          ><span>Felipe Ferrari<small>SHIP TO DATA</small></span></a
+        >
+        <nav aria-label="Main navigation"><a href="/" aria-current="page">Home</a><a href="/projects/">Projects</a><a href="/blog/">Writing</a><a href="/about/">About</a><a class="nav-contact" href="#contact">Contact <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a></nav>
       </div>
     </header>
-    <canvas aria-hidden="true"></canvas>
-    <main id="main">
-      <section id="section1" class="section1" aria-label="Introduction">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 offset-lg-6 hero-copy">
-              <h1>Hi, I am <b>Felipe Ferrari</b>. I build
-                <b>simulations and visualizations</b> for maritime engineering.</h1>
-
-              <p>
-                I combine numerical simulation, data analysis, and interactive
-                visualization to make complex engineering problems easier to explore
-                and understand.
-              </p>
-              <a href="#section2" class="btnD1 rounded learn-more">About Me</a>
-              <button type="button" class="btnD1 rounded animation-toggle" aria-pressed="false">Pause animation</button>
-              <a
-                target="_blank" rel="noopener noreferrer"
-                href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street"
-                class="btnD1 rounded learnVon" aria-label="Learn about the vortex street"
-              >
-                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                  <path
-                    fill="#DCE8F2"
-                    d="M14.97,18.95L12.41,12.92C11.39,14.91 10.27,17 9.31,18.95C9.3,18.96 8.84,18.95 8.84,18.95C7.37,15.5 5.85,12.1 4.37,8.68C4.03,7.84 2.83,6.5 2,6.5C2,6.4 2,6.18 2,6.05H7.06V6.5C6.46,6.5 5.44,6.9 5.7,7.55C6.42,9.09 8.94,15.06 9.63,16.58C10.1,15.64 11.43,13.16 12,12.11C11.55,11.23 10.13,7.93 9.71,7.11C9.39,6.57 8.58,6.5 7.96,6.5C7.96,6.35 7.97,6.25 7.96,6.06L12.42,6.07V6.47C11.81,6.5 11.24,6.71 11.5,7.29C12.1,8.53 12.45,9.42 13,10.57C13.17,10.23 14.07,8.38 14.5,7.41C14.76,6.76 14.37,6.5 13.29,6.5C13.3,6.38 13.3,6.17 13.3,6.07C14.69,6.06 16.78,6.06 17.15,6.05V6.47C16.44,6.5 15.71,6.88 15.33,7.46L13.5,11.3C13.68,11.81 15.46,15.76 15.65,16.2L19.5,7.37C19.2,6.65 18.34,6.5 18,6.5C18,6.37 18,6.2 18,6.05L22,6.08V6.1L22,6.5C21.12,6.5 20.57,7 20.25,7.75C19.45,9.54 17,15.24 15.4,18.95C15.4,18.95 14.97,18.95 14.97,18.95Z"
-                  />
-                </svg>
-              </a>
-              <a
-                target="_blank" rel="noopener noreferrer"
-                href="https://github.com/ferrari212/vortice-induced-ilustration/tree/master"
-                class="btnD1 rounded learnVon" aria-label="View the simulation source code"
-              >
-                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                  <path
-                    fill="#DCE8F2"
-                    d="M20.38,8.53C20.54,8.13 21.06,6.54 20.21,4.39C20.21,4.39 18.9,4 15.91,6C14.66,5.67 13.33,5.62 12,5.62C10.68,5.62 9.34,5.67 8.09,6C5.1,3.97 3.79,4.39 3.79,4.39C2.94,6.54 3.46,8.13 3.63,8.53C2.61,9.62 2,11 2,12.72C2,19.16 6.16,20.61 12,20.61C17.79,20.61 22,19.16 22,12.72C22,11 21.39,9.62 20.38,8.53M12,19.38C7.88,19.38 4.53,19.19 4.53,15.19C4.53,14.24 5,13.34 5.8,12.61C7.14,11.38 9.43,12.03 12,12.03C14.59,12.03 16.85,11.38 18.2,12.61C19,13.34 19.5,14.23 19.5,15.19C19.5,19.18 16.13,19.38 12,19.38M8.86,13.12C8.04,13.12 7.36,14.12 7.36,15.34C7.36,16.57 8.04,17.58 8.86,17.58C9.69,17.58 10.36,16.58 10.36,15.34C10.36,14.11 9.69,13.12 8.86,13.12M15.14,13.12C14.31,13.12 13.64,14.11 13.64,15.34C13.64,16.58 14.31,17.58 15.14,17.58C15.96,17.58 16.64,16.58 16.64,15.34C16.64,14.11 16,13.12 15.14,13.12Z"
-                  />
-                </svg>
-              </a>
-              <a href="Felipe_CV.pdf" target="_blank" rel="noopener noreferrer" class="btnD1 rounded">MY CV</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="section2" class="section2" aria-label="About me">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <img
-                src="images/myphoto_two.jpg"
-                class="mx-auto d-block profile-image"
-                alt="Portrait of Felipe Ferrari"
-                height="350"
-              />
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-md-5">
-            <p>
-              I am a versatile professional skilled in both numerical simulation
-              and data analysis. My current role as Engineer at
-              <b
-                ><a
-                  style="text-decoration: none; color: #a60d0d"
-                  target="_blank" rel="noopener noreferrer"
-                  href="https://www.dnv.com/"
-                  >Det Norske Veritas (DNV)</a
-                ></b
-              >
-              focuses on applying data science and machine learning knowledge to
-              improve structural assessment under the industry-recognized
-              service
-              <b
-                ><a
-                  style="text-decoration: none; color: #a60d0d"
-                  target="_blank" rel="noopener noreferrer"
-                  href="https://www.dnv.com/expert-story/maritime-impact/Fleet-wide-implementation-of-next-generation-hull-integrity-monitoring.html"
-                  >Nerves of Steel</a
-                ></b
-              >. I'm also a contributor to the open library
-              <b
-                ><a
-                  style="text-decoration: none; color: #a60d0d"
-                  target="_blank" rel="noopener noreferrer"
-                  href="https://shiplab.github.io/vesseljs/"
-                  >Vessel.js</a
-                ></b
-              >
-              for
-              <b
-                ><a
-                  style="text-decoration: none; color: #a60d0d"
-                  target="_blank" rel="noopener noreferrer"
-                  href="http://www.shiplab.hials.org/"
-                  >ShipLab</a
-                ></b
-              >.
-            </p>
-          </div>
-        </div>
-
-        <h6 class="reference" style="color: #dce8f2">
-          Background photo by
-          <b
-            ><a
-              style="text-decoration: none; color: #dce8f2"
-              target="_blank" rel="noopener noreferrer"
-              href="https://unsplash.com/photos/QPNpXcQfdLA"
-            >
-              Cristina Gottardi</a
-            ></b
+    <main id="main" tabindex="-1"><section class="shell hero" aria-labelledby="intro-title">
+  <div class="hero-copy">
+    <p class="eyebrow">
+      <span class="signal" aria-hidden="true"></span>NAVAL & STRUCTURAL ENGINEER
+    </p>
+    <h1 id="intro-title">From ships<br />to <em>digital systems.</em></h1>
+    <p class="lede">
+      I’m Felipe Ferrari de Oliveira. I build software, numerical models, and
+      visual tools that connect engineering knowledge with real operational
+      data.
+    </p>
+    <p class="hero-direction">
+      Building on maritime experience. Studying applied AI. <br />Preparing to
+      begin a PhD at NTNU.
+    </p>
+    <div class="actions">
+      <a class="button" href="/projects/"
+        >Explore my work <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a
+      ><a class="text-link" href="/about/">A little about me →</a>
+    </div>
+  </div>
+  <figure class="simulation-card">
+    <div class="figure-top">
+      <span>01 / AN ENGINEERING SKETCH</span
+      ><span class="live-label">FLOW ILLUSTRATION</span>
+    </div>
+    <div class="simulation-viewport">
+      <canvas
+        aria-label="Illustration of particle flow around a circular obstacle"
+        >An animated illustration of flow around a circular obstacle.</canvas
+      >
+    </div>
+    <figcaption>
+      <div>
+        <strong>A model you can explore.</strong>
+        <p>
+          The vortex illustration from my original portfolio.<br />An
+          illustration, not a validated CFD solver.
+        </p>
+      </div>
+      <button class="animation-toggle" type="button" aria-pressed="false">
+        Pause animation
+      </button>
+    </figcaption>
+    <a
+      class="figure-source"
+      href="https://github.com/ferrari212/vortice-induced-ilustration"
+      >Explore the original code <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a
+    >
+  </figure>
+</section>
+<section class="experience-strip" aria-label="Experience and direction">
+  <div class="shell strip-grid">
+    <p>
+      <span>INDUSTRY</span>DNV · Structural engineering & digital applications
+    </p>
+    <p><span>RESEARCH</span>NTNU · Maritime simulation & digital twins</p>
+    <p><span>NEXT CHAPTER</span>Applied AI for physical & industrial systems</p>
+  </div>
+</section>
+<section class="shell section-space" aria-labelledby="selected-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2 id="selected-title">Models, tools, and the thinking behind them.</h2>
+    </div>
+    <a class="text-link" href="/projects/">All projects →</a>
+  </div>
+  <div class="project-grid"><article class="project-card"><a class="project-image" href="/projects/ship-manoeuvring/" tabindex="-1" aria-hidden="true"><img src="/images/optimized/man.webp" width="720" height="450" loading="lazy" alt="Ship manoeuvring in the browser — existing project interface"><span class="project-number">01</span></a><div class="project-card-copy"><p class="eyebrow">Interactive simulation</p><h3><a href="/projects/ship-manoeuvring/">Ship manoeuvring in the browser <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a></h3><p>Explore a vessel’s response to control inputs through a browser-based numerical model.</p><ul class="tags" aria-label="Topics"><li>JavaScript</li><li>Numerical modelling</li><li>Vessel.js</li></ul></div></article><article class="project-card"><a class="project-image" href="/projects/mooring-dynamics/" tabindex="-1" aria-hidden="true"><img src="/images/optimized/MooringLine.webp" width="720" height="450" loading="lazy" alt="Mooring &amp; floating-body dynamics — existing project interface"><span class="project-number">02</span></a><div class="project-card-copy"><p class="eyebrow">Scientific computing</p><h3><a href="/projects/mooring-dynamics/">Mooring &amp; floating-body dynamics <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a></h3><p>Investigate the response of floating systems and their mooring lines under environmental loading.</p><ul class="tags" aria-label="Topics"><li>JavaScript</li><li>6-DOF dynamics</li><li>Hydrodynamics</li></ul></div></article><article class="project-card"><a class="project-image" href="/projects/digital-twin-data/" tabindex="-1" aria-hidden="true"><img src="/images/optimized/collaboration_diagram.webp" width="720" height="450" loading="lazy" alt="Connecting ship data across the lifecycle — existing project interface"><span class="project-number">03</span></a><div class="project-card-copy"><p class="eyebrow">Published research</p><h3><a href="/projects/digital-twin-data/">Connecting ship data across the lifecycle <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a></h3><p>Organize ship, sensor, and operational-context data across design and operation.</p><ul class="tags" aria-label="Topics"><li>Data models</li><li>Digital twins</li><li>Web architectures</li></ul></div></article></div>
+</section>
+<section class="research-band">
+  <div class="shell research-grid">
+    <div>
+      <p class="eyebrow">RESEARCH & RECOGNITION</p>
+      <h2>Connecting data across<br />the life of a vessel.</h2>
+      <p>
+        My collaborative research explores how ship models, sensor information,
+        and operational context fit together across design and operation.
+      </p>
+      <a class="text-link" href="/projects/digital-twin-data/"
+        >Read about the framework →</a
+      >
+    </div>
+    <div class="award-note">
+      <span class="award-year">2023 PUBLICATION</span>
+      <h3>RINA Wakeham Prize</h3>
+      <p>
+        Our paper in the
+        <cite>International Journal of Maritime Engineering</cite> received the
+        prize for the best general paper in the journal by an author aged 35 or
+        under.
+      </p>
+      <a href="/about/#publications">Publications & award details →</a>
+    </div>
+  </div>
+</section>
+<section class="shell section-space writing-intro"><div><p class="eyebrow">TECHNICAL WRITING</p><h2>Models need explanations, too.</h2><p>A space for notes on scientific computing, engineering software, and my developing research in applied AI. No posts published yet; the existing Vessel.js tutorial is a place to start.</p><a class="text-link" href="/blog/">Explore writing & the tutorial →</a></div><a class="writing-resource" href="/projects/vesseljs-tutorial/"><span class="eyebrow">EXISTING INTERACTIVE GUIDE</span><h3>From the hull to simulation</h3><p>Follow the path from vessel data to a digital model and manoeuvrability simulation.</p><span>Read about the guide <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a></section>
+<section class="shell section-space person-section">
+  <img
+    src="/images/optimized/portrait.webp"
+    width="350"
+    height="350"
+    loading="lazy"
+    alt="Felipe Ferrari de Oliveira"
+  />
+  <div>
+    <p class="eyebrow">BEYOND THE MODELS</p>
+    <h2>Curiosity is a people skill, too.</h2>
+    <p>
+      I enjoy dancing, calisthenics, and learning about language and
+      communication. Explaining an idea, understanding another perspective, and
+      working with people matter as much to me as building the model.
+    </p>
+    <a class="text-link" href="/about/">My background & interests →</a>
+  </div>
+</section>
+</main>
+    <footer class="site-footer" id="contact">
+      <div class="shell footer-top">
+        <div>
+          <p class="eyebrow">LET’S CONNECT</p>
+          <h2>Good engineering starts<br />with a conversation.</h2>
+          <p>
+            Research, industrial collaboration, or an interesting technical
+            problem.
+          </p>
+          <a class="text-link" href="mailto:felipe.ferrari.212@gmail.com"
+            >felipe.ferrari.212@gmail.com <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a
           >
-          on
-          <b
-            ><a
-              style="text-decoration: none; color: #dce8f2"
-              target="_blank" rel="noopener noreferrer"
-              href="https://unsplash.com/"
-              >Unsplash</a
-            ></b
-          >
-          (adapted).
-        </h6>
-      </section>
-
-      <section id="section3" class="section3" aria-label="Selected projects">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="card text-center">
-                <div class="card-header">
-                  <ul class="nav nav-tabs card-header-tabs" role="tablist" aria-label="Selected projects">
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link expertises active-video" id="tab-maneuvering" role="tab" aria-controls="project-maneuvering" aria-selected="true" tabindex="0">Maneuvering</button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link expertises" id="tab-epoch" role="tab" aria-controls="project-epoch" aria-selected="false" tabindex="-1">Offshore operations</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link expertises" id="tab-Gunnerus" role="tab" aria-controls="project-Gunnerus" aria-selected="false" tabindex="-1">Gunnerus model</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link expertises" id="tab-guide" role="tab" aria-controls="project-guide" aria-selected="false" tabindex="-1">Vessel.js tutorial</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button type="button" class="nav-link expertises" id="tab-simulation" role="tab" aria-controls="project-simulation" aria-selected="false" tabindex="-1">Mooring</button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <a
-                    style="text-decoration: none"
-                    target="_blank" rel="noopener noreferrer"
-                    class="project-panel" id="project-maneuvering" role="tabpanel" aria-labelledby="tab-maneuvering"
-                    href="https://shiplab.github.io/openbridge/"
-                  >
-
-                    <img class="active" width="90%" src="images/man.jpg" alt="Ship maneuvering simulation interface" loading="lazy" />
-                    <br />
-                    <p
-                      >Maneuvering simulation using differential equations
-                      solvers to calculate a realistic response from the user
-                      configuration.</p
-                    >
-                  </a>
-                  <a
-                    style="text-decoration: none"
-                    target="_blank" rel="noopener noreferrer"
-                    class="project-panel" id="project-epoch" role="tabpanel" aria-labelledby="tab-epoch" hidden
-                    href="https://shiplab.github.io/vesseljs/examples/epoch.html"
-                  >
-                    <h5 class="card-title">Epoch visualization</h5>
-                    <img class="active" width="100%" src="images/epoch.jpg" alt="Offshore carbon dioxide storage operation visualization" loading="lazy" />
-                    <p
-                      >Visualization of an offshore epoch for carbon dioxide
-                      trapping to elucidate the main points in the operation,
-                      with the possibility for user parameters
-                      configuration.</p
-                    >
-                  </a>
-                  <a
-                    style="text-decoration: none"
-                    target="_blank" rel="noopener noreferrer"
-                    class="project-panel" id="project-Gunnerus" role="tabpanel" aria-labelledby="tab-Gunnerus" hidden
-                    href="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html"
-                  >
-                    <h5 class="card-title">Gunnerus Visualization</h5>
-                    <img
-                      class="active"
-                      width="70%"
-                      src="images/gunnerus_model.jpg" alt="Digital model of the NTNU research vessel Gunnerus" loading="lazy"
-                    />
-                    <br />
-                    <p
-                      >A visualization for NTNU University ship Gunnerus. The
-                      view can be changed between detailed and sketch, allowing
-                      the interaction with the main components.</p
-                    >
-                  </a>
-                  <a
-                    style="text-decoration: none"
-                    target="_blank" rel="noopener noreferrer"
-                    class="project-panel" id="project-guide" role="tabpanel" aria-labelledby="tab-guide" hidden
-                    href="https://observablehq.com/@ferrari212/from-the-hull-to-simulation-a-vessel-js-tutorial?collection=@ferrari212/from-hull-to-simulation"
-                  >
-                    <h5 class="card-title">
-                      Vessel.js Gunnerus tutorial guide
-                    </h5>
-                    <img
-                      class="active"
-                      width="90%"
-                      src="images/Gunnerus_starboard_su.jpg" alt="Gunnerus vessel used in the Vessel.js tutorial" loading="lazy"
-                    />
-                    <br />
-                    <p
-                      >A complete visual and interactive guide that explains how
-                      to use vessel.js library for creating the digital models.
-                      The guide shows the steps from the general arrangement and
-                      offset table to a maneuverability simulation of the
-                      ship.</p
-                    >
-                  </a>
-                  <a
-                    style="text-decoration: none"
-                    target="_blank" rel="noopener noreferrer"
-                    class="project-panel" id="project-simulation" role="tabpanel" aria-labelledby="tab-simulation" hidden
-                    href="https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave.html"
-                  >
-                    <h5 class="card-title">
-                      Simulation of Mooring System using Vessel.js
-                    </h5>
-                    <img
-                      class="active"
-                      height="350"
-                      src="images/MooringLine.gif" alt="Animated mooring system simulation" loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5">
-              <h2>Selected work in simulation and visualization</h2>
-              <p>
-                My personal portfolio showcases simulations and visualizations
-                developed with my broad range of skills, including examples
-                developed with my ShipLab teammates. The examples explore vessel
-                maneuvering, offshore operations, and mooring systems. Open a project
-                to try the interactive demonstration or follow the Vessel.js tutorial.
-              </p>
-              <p>
-                On a daily basis, I utilize Python to process large data sources
-                and present the findings in clear and concise dashboards.
-                Additionally, I am responsible for developing and maintaining
-                libraries dedicated to fatigue assessment in the DNV Maritime
-                Advisory Structure.
-              </p>
-              <br />
-            </div>
-          </div>
         </div>
-
-        <h6 class="reference">
-          Background photo by
-          <b
-            ><a
-              style="text-decoration: none; color: #dce8f2"
-              target="_blank" rel="noopener noreferrer"
-              href="https://unsplash.com/photos/5Rgr_zI7pBw"
-              >Dorian Mongel</a
-            ></b
-          >
-          on
-          <b
-            ><a
-              style="text-decoration: none; color: #dce8f2"
-              target="_blank" rel="noopener noreferrer"
-              href="https://unsplash.com/"
-              >Unsplash</a
-            ></b
-          >
-          (adapted).
-        </h6>
-      </section>
-
-      <section id="section5" class="section5" aria-label="Contact">
-
-        <div id="contact">
-          <div class="row">
-            <div class="col-12">
-              <h2>Contacts</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <a
-                style="text-decoration: none"
-                target="_blank" rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/ferrari212/"
-              >
-                <p>
-                  <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-                    <path
-                      fill="#011C40"
-                      d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"
-                    />
-                  </svg>
-                  /in/ferrari212
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <a
-                style="text-decoration: none"
-                target="_blank" rel="noopener noreferrer"
-                href="https://github.com/ferrari212"
-              >
-                <p>
-                  <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-                    <path
-                      fill="#011C40"
-                      d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H14.56C14.24,20.93 14.23,20.32 14.23,20.11L14.24,17.64C14.24,16.8 13.95,16.25 13.63,15.97C15.64,15.75 17.74,15 17.74,11.53C17.74,10.55 17.39,9.74 16.82,9.11C16.91,8.89 17.22,7.97 16.73,6.73C16.73,6.73 15.97,6.5 14.25,7.66C13.53,7.46 12.77,7.36 12,7.35C11.24,7.36 10.46,7.46 9.75,7.66C8.03,6.5 7.27,6.73 7.27,6.73C6.78,7.97 7.09,8.89 7.18,9.11C6.61,9.74 6.26,10.55 6.26,11.53C6.26,15 8.36,15.75 10.36,16C10.1,16.2 9.87,16.6 9.79,17.18C9.27,17.41 7.97,17.81 7.17,16.43C7.17,16.43 6.69,15.57 5.79,15.5C5.79,15.5 4.91,15.5 5.73,16.05C5.73,16.05 6.32,16.33 6.73,17.37C6.73,17.37 7.25,19.12 9.76,18.58L9.77,20.11C9.77,20.32 9.75,20.93 9.43,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z"
-                    />
-                  </svg>
-                  /ferrari212
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p>
-                <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-                  <path
-                    fill="#011C40"
-                    d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-                  />
-                </svg>
-                <a href="mailto:felipe.ferrari@dnv.com">felipe.ferrari@dnv.com</a>
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p>
-                <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
-                  <path
-                    fill="#011C40"
-                    d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
-                  />
-                </svg>
-                <a href="tel:+4746273655">+47 462 73 655</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-6 offset-6 is-mobile">
-            <div class="row">
-              <h6 class="reference" style="left: 50vw">
-                Background photo by
-                <b
-                  ><a
-                    style="text-decoration: none; color: #dce8f2"
-                    target="_blank" rel="noopener noreferrer"
-                    href="https://unsplash.com/photos/p-_RJY6hN3E"
-                    >Tomas Williams
-                  </a></b
-                >
-                on
-                <b
-                  ><a
-                    style="text-decoration: none; color: #dce8f2"
-                    target="_blank" rel="noopener noreferrer"
-                    href="https://unsplash.com/"
-                    >Unsplash</a
-                  ></b
-                >
-                (adapted).
-              </h6>
-            </div>
-          </div>
+        <div class="footer-links">
+          <a href="https://github.com/ferrari212">GitHub <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a
+          ><a href="https://www.linkedin.com/in/ferrari212/">LinkedIn <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a
+          ><a href="/Felipe_CV.pdf">Download CV (PDF) ↓</a
+          ><a href="/about/#publications">Publications →</a>
         </div>
-      </section>
-    </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js"></script>
+      </div>
+      <div class="shell footer-bottom">
+        <span>Felipe Ferrari de Oliveira</span
+        ><span>Naval engineering · Software · Applied AI</span
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
   </body>
 </html>

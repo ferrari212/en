@@ -2,7 +2,7 @@
   "title": "A catenary model for mooring lines",
   "category": "Open-source model",
   "summary": "Explore the geometry of a hanging mooring line between reference points.",
-  "image": "",
+  "image": "/images/catenary-interface.jpg",
   "tags": [
     "JavaScript",
     "Catenary geometry",
