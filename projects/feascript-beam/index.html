@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finite elements, with checks built in · Felipe Ferrari</title>
+    <meta name="description" content="Contributions to FEAScript’s Euler–Bernoulli beam solver and numerical test coverage." />
+    <meta name="theme-color" content="#295773" />
+    <link rel="canonical" href="https://shiptodata.com/projects/feascript-beam/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ship to Data · Felipe Ferrari" />
+    <meta property="og:title" content="Finite elements, with checks built in · Felipe Ferrari" />
+    <meta property="og:description" content="Contributions to FEAScript’s Euler–Bernoulli beam solver and numerical test coverage." />
+    <meta property="og:url" content="https://shiptodata.com/projects/feascript-beam/" />
+    <meta property="og:image" content="https://shiptodata.com/images/optimized/feascript-beam.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/index.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Felipe Ferrari — home"
+          ><span class="brand-mark" aria-hidden="true">f<span>.</span></span
+          ><span>Felipe Ferrari<small>SHIP TO DATA</small></span></a
+        >
+        <nav aria-label="Main navigation"><a href="/">Home</a><a href="/projects/" aria-current="page">Projects</a><a href="/blog/">Writing</a><a href="/about/">About</a><a class="nav-contact" href="#contact">Contact <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a></nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><section class="shell page-intro"><a class="breadcrumb" href="/projects/">← All projects</a><p class="eyebrow">Open-source contribution</p><h1>Finite elements, with checks built in</h1><p class="lede">Contributions to FEAScript’s Euler–Bernoulli beam solver and numerical test coverage.</p><ul class="tags" aria-label="Topics"><li>Finite elements</li><li>JavaScript</li><li>Numerical verification</li></ul></section><div class="shell project-detail"><figure class="project-hero"><img src="/images/optimized/feascript-beam.webp" width="1000" height="620" alt="Finite elements, with checks built in — project preview"><figcaption>A locally computed FEAScript 0.3.1 cantilever example: nodal deflections compared with the classical solution. Parameters and source revision are recorded with the figure.</figcaption></figure><div class="detail-grid"><article class="prose"><h2 id="engineering-purpose">Engineering purpose</h2>
+<p>A finite element implementation should make both the numerical model and its checks explicit. Beam bending is a useful example: a small implementation can be compared with classical solutions before tackling more complex structural systems.</p>
+<h2 id="my-contribution">My contribution</h2>
+<p>FEAScript lists me as a contributor. The public history records my co-authored pull requests for the Euler–Bernoulli beam solver (#86, with cubic Hermite elements) and testing work (#83). The beam contribution includes boundary-condition handling, unit tests, and a regression example.</p>
+<p>This is a contribution to a collaborative finite element library, not a claim that I authored FEAScript as a whole.</p>
+<h2 id="methods-and-implementation">Methods and implementation</h2>
+<p>Cubic Hermite interpolation represents both transverse displacement and rotation, providing the continuity needed for the fourth-order beam equation. The documented model supports fixed and pinned supports, prescribed rotations, point forces, moments, and spring supports.</p>
+<p>For a cantilever with length <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math>, constant bending stiffness <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>E</mi><mi>I</mi></mrow></math>, and a tip force <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi></mrow></math>, the classical tip deflection is:</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>w</mi><mo stretchy="false">&#x00028;</mo><mi>L</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>r</mi><mi>a</mi><mi>c</mi><mrow><mi>P</mi><msup><mi>L</mi><mn>3</mn></msup></mrow><mrow><mn>3</mn><mi>E</mi><mi>I</mi></mrow></mrow></math>
+
+<h2 id="demonstrated-capability">Demonstrated capability</h2>
+<p>The figure on this page was computed from the public FEAScript 0.3.1 cantilever example using 20 elements, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi><mo>&#x0003D;</mo><mn>4</mn></mrow></math> m, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>E</mi><mi>I</mi><mo>&#x0003D;</mo><mn>100000</mn></mrow></math> N·m², and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mn>1000</mn></mrow></math> N. The computed tip deflection was checked against the classical expression before generating the plot.</p>
+<p>This is a reference calculation, not a new research finding or a general validation claim. The contribution’s regression documentation also describes checks of element stiffness, cantilever response, and global equilibrium for its supported test cases.</p>
+<p><a href="/images/optimized/feascript-beam.svg">Download the computed figure as SVG</a>. The <a href="https://github.com/FEAScript/FEAScript-core">project source</a> contains the solver and its tests.</p></article><aside class="project-sidebar"><p class="eyebrow">MY CONTRIBUTION</p><p>Contributed a 1D Euler–Bernoulli beam solver using cubic Hermite elements, alongside testing work, in co-authored FEAScript pull requests #86 and #83.</p><h2>Explore the work</h2><div class="actions"><a class="button " href="https://github.com/FEAScript/FEAScript-core/pull/86">Read the solver contribution <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a><a class="button secondary" href="https://github.com/FEAScript/FEAScript-core/pull/83">Testing contribution <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a><a class="button secondary" href="https://github.com/FEAScript/FEAScript-core/tree/main/examples/eulerBernoulliBeamScript/cantileverBeam1D">Explore the example <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a><a class="button secondary" href="https://feascript.com/">FEAScript project <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a></div><p class="small">Demonstrations open on their original project websites.</p></aside></div></div></main>
+    <footer class="site-footer" id="contact">
+      <div class="shell footer-top">
+        <div>
+          <p class="eyebrow">LET’S CONNECT</p>
+          <h2>Good engineering starts<br />with a conversation.</h2>
+          <p>
+            Research, industrial collaboration, or an interesting technical
+            problem.
+          </p>
+          <a class="text-link" href="mailto:felipe.ferrari.212@gmail.com"
+            >felipe.ferrari.212@gmail.com <span aria-hidden="true"><svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></a
+          >
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/ferrari212">GitHub <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a
+          ><a href="https://www.linkedin.com/in/ferrari212/">LinkedIn <svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a
+          ><a href="/Felipe_CV.pdf">Download CV (PDF) ↓</a
+          ><a href="/about/#publications">Publications →</a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>Felipe Ferrari de Oliveira</span
+        ><span>Naval engineering · Software · Applied AI</span
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

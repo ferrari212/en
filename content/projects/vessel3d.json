@@ -1,0 +1,28 @@
+{
+  "slug": "vessel3d",
+  "title": "Vessel3D: ship models you can build on",
+  "category": "Open-source library",
+  "summary": "A Three.js-based library and live editor for conceptual ship visualization and basic naval architecture calculations.",
+  "image": "/images/vessel3d-editor.jpg",
+  "tags": [
+    "JavaScript",
+    "Three.js",
+    "Naval architecture"
+  ],
+  "contribution": "Authored Vessel3D with NTNU / ShipLab support, building on the groundwork of Vessel.js. Developed the live editor and contributed ship interaction and stability features.",
+  "image_caption": "The Vessel3D live editor, captured from the public source at commit 43adb48 using its default model.",
+  "links": [
+    {
+      "label": "Open the live editor",
+      "url": "https://shiplab.github.io/vessel3D/"
+    },
+    {
+      "label": "Explore source",
+      "url": "https://github.com/shiplab/vessel3D"
+    },
+    {
+      "label": "Live editor contribution",
+      "url": "https://github.com/shiplab/vessel3D/commit/6ddcf704b94a66d27d8655dadb6244476f3d17d5"
+    }
+  ]
+}

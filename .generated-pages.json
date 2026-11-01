@@ -7,10 +7,12 @@
   "index.html",
   "projects/catenary-model/index.html",
   "projects/digital-twin-data/index.html",
+  "projects/feascript-beam/index.html",
   "projects/gunnerus-visualization/index.html",
   "projects/index.html",
   "projects/mooring-dynamics/index.html",
   "projects/ship-manoeuvring/index.html",
+  "projects/vessel3d/index.html",
   "projects/vesseljs-tutorial/index.html",
   "robots.txt",
   "sitemap.xml"

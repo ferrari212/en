@@ -16,8 +16,16 @@
   describes a hanging catenary. The preview must come from this real interface.
 - The existing offshore-epoch example is retained as an additional demonstration,
   not relabelled as a new personal achievement.
-- No verified material establishes a specific Vessel3D or FEAScript contribution.
-  Do not add either to the portfolio without source material and role confirmation.
+- Vessel3D: public `shiplab/vessel3D` README names Felipe as author and credits
+  NTNU/ShipLab and Vessel.js. Source history verifies the live editor (6ddcf70),
+  drag-control integration, and stability updates. The screenshot is an actual
+  run of the source at 43adb48 with its default model.
+- FEAScript: its CONTRIBUTORS.md lists Felipe. Commits 6d926bc (PR #86) and
+  57d94ff (PR #83) are attributed to ferrari212 and co-authored with Nikos
+  Chamakos. The 1D Euler–Bernoulli solver uses cubic Hermite elements. The
+  plotted reference calculation was run from public dist/feascript.cjs at
+  c0dabd9; parameters and computed values are retained in content/figures/.
+  No benchmark or unverified research result is claimed.
 - No original blog manuscripts were present. The blog launches with an honest
   empty state and a link to the existing Observable tutorial. Test articles are
   temporary fixtures and never published.

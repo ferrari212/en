@@ -1,0 +1,32 @@
+{
+  "slug": "feascript-beam",
+  "title": "Finite elements, with checks built in",
+  "category": "Open-source contribution",
+  "summary": "Contributions to FEAScript’s Euler–Bernoulli beam solver and numerical test coverage.",
+  "image": "/images/feascript-beam.jpg",
+  "tags": [
+    "Finite elements",
+    "JavaScript",
+    "Numerical verification"
+  ],
+  "contribution": "Contributed a 1D Euler–Bernoulli beam solver using cubic Hermite elements, alongside testing work, in co-authored FEAScript pull requests #86 and #83.",
+  "image_caption": "A locally computed FEAScript 0.3.1 cantilever example: nodal deflections compared with the classical solution. Parameters and source revision are recorded with the figure.",
+  "links": [
+    {
+      "label": "Read the solver contribution",
+      "url": "https://github.com/FEAScript/FEAScript-core/pull/86"
+    },
+    {
+      "label": "Testing contribution",
+      "url": "https://github.com/FEAScript/FEAScript-core/pull/83"
+    },
+    {
+      "label": "Explore the example",
+      "url": "https://github.com/FEAScript/FEAScript-core/tree/main/examples/eulerBernoulliBeamScript/cantileverBeam1D"
+    },
+    {
+      "label": "FEAScript project",
+      "url": "https://feascript.com/"
+    }
+  ]
+}
