@@ -1,4 +1,8 @@
 <section class="shell hero" aria-labelledby="intro-title">
+  <figure class="hero-portrait">
+    <img src="/images/optimized/portrait.webp" width="650" height="799"
+      fetchpriority="high" alt="Felipe Ferrari" />
+  </figure>
   <div class="hero-copy">
     <p class="eyebrow">
       <span class="signal" aria-hidden="true"></span>NAVAL & STRUCTURAL ENGINEER
@@ -19,34 +23,7 @@
       ><a class="text-link" href="/about/">A little about me →</a>
     </div>
   </div>
-  <figure class="simulation-card">
-    <div class="figure-top">
-      <span>01 / AN ENGINEERING SKETCH</span
-      ><span class="live-label">FLOW ILLUSTRATION</span>
-    </div>
-    <div class="simulation-viewport">
-      <canvas
-        aria-label="Illustration of particle flow around a circular obstacle"
-        >An animated illustration of flow around a circular obstacle.</canvas
-      >
-    </div>
-    <figcaption>
-      <div>
-        <strong>A model you can explore.</strong>
-        <p>
-          The vortex illustration from my original portfolio.<br />An illustrative model of particle flow.
-        </p>
-      </div>
-      <button class="animation-toggle" type="button" aria-pressed="false">
-        Pause animation
-      </button>
-    </figcaption>
-    <a
-      class="figure-source"
-      href="https://github.com/ferrari212/vortice-induced-ilustration"
-      >Explore the original code ↗</a
-    >
-  </figure>
+
 </section>
 <section class="experience-strip" aria-label="Experience and direction">
   <div class="shell strip-grid">
@@ -64,6 +41,61 @@
       <h2 id="selected-title">Selected engineering projects</h2>
     </div>
     <a class="text-link" href="/projects/">All projects →</a>
+  </div>
+  <div class="interactive-projects" aria-label="Interactive engineering examples">
+  <figure class="simulation-card">
+    <div class="figure-top">
+      <span>PARTICLE FLOW</span
+      ><span class="live-label">FLOW ILLUSTRATION</span>
+    </div>
+    <div class="simulation-viewport">
+      <canvas
+        aria-label="Illustration of particle flow around a circular obstacle"
+        >An animated illustration of flow around a circular obstacle.</canvas
+      >
+    </div>
+    <figcaption>
+      <div>
+        <strong>Vortex flow illustration</strong>
+        <p>
+          The vortex illustration from my original portfolio.<br />An illustrative model of particle flow.
+        </p>
+      </div>
+      <button class="animation-toggle" type="button" aria-pressed="false">
+        Pause animation
+      </button>
+    </figcaption>
+    <a
+      class="figure-source"
+      href="https://github.com/ferrari212/vortice-induced-ilustration"
+      >Explore the original code ↗</a
+    >
+  </figure>
+    <article class="simulation-card vessel-demo" aria-labelledby="gunnerus-title">
+      <div class="figure-top"><span>RESEARCH VESSEL GUNNERUS</span><span class="live-label">INTERACTIVE 3D MODEL</span></div>
+      <div class="vessel-viewport" id="gunnerus-viewer">
+        <div class="vessel-placeholder">
+          <img src="/images/optimized/gunnerus_model.webp" width="720" height="450"
+            loading="lazy" alt="Preview of the Gunnerus vessel model" />
+          <button class="button demo-load" type="button" aria-controls="gunnerus-frame" hidden>Load 3D example</button>
+          <noscript><a class="button" href="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html">Open 3D example</a></noscript>
+        </div>
+        <iframe id="gunnerus-frame" title="Interactive Gunnerus vessel model from Vessel.js"
+          data-src="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html"
+          allow="fullscreen" allowfullscreen hidden></iframe>
+      </div>
+      <div class="demo-copy">
+        <h3 id="gunnerus-title">Gunnerus vessel model</h3>
+        <p>Rotate and zoom the research vessel, switch between model views, and inspect its components.</p>
+        <p class="small">Part of the collaborative Vessel.js / ShipLab work at NTNU.</p>
+        <p class="demo-status small" role="status" aria-live="polite"></p>
+        <div class="demo-actions">
+          <a class="text-link" href="https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html" target="_blank" rel="noopener">Open full-page example ↗</a>
+          <button class="button secondary demo-close" type="button" aria-controls="gunnerus-frame" hidden>Close example</button>
+        </div>
+        <a class="figure-source" href="/projects/gunnerus-visualization/">Project details & credits →</a>
+      </div>
+    </article>
   </div>
   <div class="project-grid">$selected_projects</div>
 </section>
@@ -94,14 +126,7 @@
   </div>
 </section>
 $writing_section
-<section class="shell section-space person-section">
-  <img
-    src="/images/optimized/portrait.webp"
-    width="650"
-    height="799"
-    loading="lazy"
-    alt="Felipe Ferrari"
-  />
+<section class="shell section-space person-section personal-interests">
   <div>
     <p class="eyebrow">BEYOND THE MODELS</p>
     <h2>Personal interests</h2>

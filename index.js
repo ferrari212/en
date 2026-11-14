@@ -261,6 +261,37 @@ function simulation1() {
 }
 if (document.querySelector("canvas")) simulation1();
 
+// Keep the external WebGL example unloaded until a visitor chooses to use it.
+const vesselDemo = document.querySelector(".vessel-demo");
+if (vesselDemo) {
+  const frame = vesselDemo.querySelector("iframe");
+  const placeholder = vesselDemo.querySelector(".vessel-placeholder");
+  const load = vesselDemo.querySelector(".demo-load");
+  const close = vesselDemo.querySelector(".demo-close");
+  const status = vesselDemo.querySelector(".demo-status");
+  load.hidden = false;
+  load.addEventListener("click", () => {
+    status.textContent = "Loading the 3D example. If it does not appear, use the full-page link below.";
+    placeholder.hidden = true;
+    frame.hidden = false;
+    close.hidden = false;
+    frame.src = frame.dataset.src;
+    frame.focus();
+  });
+  frame.addEventListener("load", () => {
+    if (!frame.hasAttribute("src")) return;
+    status.textContent = "The model may take a moment to load. Drag to rotate and scroll or pinch to zoom. If the viewer is unavailable, use the full-page link.";
+  });
+  close.addEventListener("click", () => {
+    frame.hidden = true;
+    frame.removeAttribute("src");
+    placeholder.hidden = false;
+    close.hidden = true;
+    status.textContent = "Example closed.";
+    load.focus();
+  });
+}
+
 const filters = document.querySelectorAll("[data-tag]");
 const posts = document.querySelectorAll("[data-post-tags]");
 filters.forEach((button) =>

@@ -190,9 +190,19 @@ h1 em {
 .hero {
   padding-block: 76px 84px;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.4fr);
   align-items: center;
   gap: 64px;
+}
+.hero-portrait {
+  width: 100%;
+  max-width: 350px;
+  justify-self: center;
+}
+.hero-portrait img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--line);
 }
 .signal {
   display: inline-block;
@@ -262,6 +272,73 @@ h1 em {
   border: 1px solid var(--line);
   border-radius: 6px;
   overflow: hidden;
+}
+.interactive-projects {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 26px;
+  margin-bottom: 48px;
+  align-items: start;
+}
+.interactive-projects .simulation-card {
+  min-width: 0;
+}
+.interactive-projects .simulation-viewport,
+.vessel-viewport {
+  height: 380px;
+}
+.vessel-viewport {
+  background: var(--paper);
+  position: relative;
+}
+.vessel-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 20px;
+}
+.vessel-placeholder img {
+  min-height: 0;
+  max-height: 260px;
+  width: 100%;
+  object-fit: contain;
+}
+.vessel-viewport iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: var(--paper);
+}
+.demo-copy {
+  padding: 20px;
+}
+.demo-copy h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.demo-copy p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.demo-status:empty {
+  display: none;
+}
+.demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.demo-copy .figure-source {
+  margin: 16px 0 0;
+}
+.person-section.personal-interests {
+  display: block;
 }
 .figure-top {
   display: flex;
@@ -1067,6 +1144,13 @@ td .small {
     padding-block: 48px;
     gap: 36px;
   }
+  .hero-portrait {
+    justify-self: start;
+    max-width: 260px;
+  }
+  .interactive-projects {
+    grid-template-columns: 1fr;
+  }
   .hero h1 {
     font-size: clamp(2.7rem, 8vw, 4rem);
   }
@@ -1176,6 +1260,15 @@ td .small {
   }
   .hero h1 {
     font-size: 2.65rem;
+  }
+  .hero-portrait {
+    max-width: 210px;
+  }
+  .interactive-projects .simulation-viewport {
+    height: 260px;
+  }
+  .vessel-viewport {
+    height: 420px;
   }
   .hero .lede {
     font-size: 1rem;
