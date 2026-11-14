@@ -399,6 +399,11 @@ canvas {
   display: inline-block;
   margin: 0 20px 18px;
 }
+.section-divider {
+  height: 32px;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
 .experience-strip {
   border-block: 1px solid var(--line);
   background: var(--surface);
