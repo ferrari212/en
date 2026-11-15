@@ -1,3 +1,4 @@
 Markdown==3.7
 latex2mathml==3.77.0
 Pygments==2.19.2
+tomli==2.0.1; python_version < "3.11"
