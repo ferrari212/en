@@ -153,8 +153,8 @@ h1 em {
 }
 .brand-mark {
   font: 700 48px/0.9 var(--serif);
-  letter-spacing: -0.12em;
-  margin-right: 6px;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 .brand-mark span {
   color: var(--red);
