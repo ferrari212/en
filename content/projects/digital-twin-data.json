@@ -1,0 +1,23 @@
+{
+  "title": "Connecting ship data across the lifecycle",
+  "category": "Published research",
+  "summary": "Organize ship, sensor, and operational-context data across design and operation.",
+  "image": "/images/collaboration_diagram.jpg",
+  "tags": [
+    "Data models",
+    "Digital twins",
+    "Web architectures"
+  ],
+  "contribution": "Co-authored peer-reviewed research on maritime data taxonomies and collaborative web-based engineering.",
+  "links": [
+    {
+      "label": "Read the 2023 paper",
+      "url": "https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3120531"
+    },
+    {
+      "label": "Related 2022 publication",
+      "url": "https://nva.sikt.no/registration/0198cc650649-249cb435-4ff2-47fc-89d2-1be1b84f5416"
+    }
+  ],
+  "slug": "digital-twin-data"
+}

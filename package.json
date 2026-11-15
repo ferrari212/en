@@ -1,0 +1,11 @@
+{
+  "name": "ship-to-data-portfolio",
+  "private": true,
+  "scripts": {
+    "test": "node tests/browser.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "playwright": "1.56.1"
+  }
+}

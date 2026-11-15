@@ -1,0 +1,23 @@
+{
+  "title": "Mooring & floating-body dynamics",
+  "category": "Scientific computing",
+  "summary": "Investigate the response of floating systems and their mooring lines under environmental loading.",
+  "image": "/images/MooringLine.gif",
+  "tags": [
+    "JavaScript",
+    "6-DOF dynamics",
+    "Hydrodynamics"
+  ],
+  "contribution": "Developed six-degree-of-freedom dynamic models for floating systems under environmental loading during NTNU research work.",
+  "links": [
+    {
+      "label": "Open demonstration",
+      "url": "https://shiplab.github.io/vesseljs/examples/Ship_in_Ocean_dynamical_MooringWave_Parametric.html"
+    },
+    {
+      "label": "Explore source",
+      "url": "https://github.com/shiplab/vesseljs"
+    }
+  ],
+  "slug": "mooring-dynamics"
+}

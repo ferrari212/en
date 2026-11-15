@@ -1,0 +1,23 @@
+{
+  "title": "Inside the Gunnerus digital model",
+  "category": "Engineering visualization",
+  "summary": "Make a research vessel’s geometry and components easier to inspect and explain.",
+  "image": "/images/gunnerus_model.jpg",
+  "tags": [
+    "Vessel.js",
+    "3D visualization",
+    "JavaScript"
+  ],
+  "contribution": "Contributed to the collaborative Vessel.js / ShipLab work represented in the original portfolio.",
+  "links": [
+    {
+      "label": "Open demonstration",
+      "url": "https://shiplab.github.io/vesseljs/examples/Gunnerus_Complete_Example.html"
+    },
+    {
+      "label": "Explore source",
+      "url": "https://github.com/shiplab/vesseljs"
+    }
+  ],
+  "slug": "gunnerus-visualization"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "From hull geometry to a vessel simulation",
+  "category": "Technical explanation",
+  "summary": "A visual, interactive guide connecting vessel data, digital models, and simulation.",
+  "image": "/images/Gunnerus_starboard_su.jpg",
+  "tags": [
+    "Technical writing",
+    "Vessel.js",
+    "Interactive learning"
+  ],
+  "contribution": "Created the tutorial linked from my original portfolio and published under my Observable account.",
+  "links": [
+    {
+      "label": "Read the interactive tutorial",
+      "url": "https://observablehq.com/@ferrari212/from-the-hull-to-simulation-a-vessel-js-tutorial?collection=@ferrari212/from-hull-to-simulation"
+    },
+    {
+      "label": "Vessel.js source",
+      "url": "https://github.com/shiplab/vesseljs"
+    }
+  ],
+  "slug": "vesseljs-tutorial"
+}
