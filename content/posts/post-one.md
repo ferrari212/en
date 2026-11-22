@@ -11,7 +11,7 @@ The maritime industry is composed from ship designers, shipyards, equipment supp
 
 Digital ship models, system descriptions, analysis results, equipment information, sensor data, maintenance records, and engineering assessments represent different views of the same physical asset. Previous work has demonstrated the potential of open architectures and multiple taxonomies for connecting lifecycle views [<a href="#ref-1">1</a>, <a href="#ref-2">2</a>]. However, relationships between vessel configurations, engineering models, operational observations, and derived assessment results can remain implicit or fragmented because the difficult on orchestrating a data structure for the whole life cycle.
 
-This challenge becomes particularly important in Digital Twin applications. Consider, for example, the structural engineering Digital Twin application: fatigue and integrity assessments may combine vessel configuration, finite-element and hydrodynamic models, operational history, environmental conditions, sensor information, and data-driven predictions. Artificial Intelligence (AI) technics can help extract, link, query, and infer information across these sources, but engineering use requires more than predictive plan information: the origin, assumptions, dependencies, uncertainty, and accuracy of results must remain traceable and quantifiable.
+This challenge becomes particularly important in Digital Twin applications. Consider, for example, the structural engineering Digital Twin application: fatigue and integrity assessments may combine vessel configuration, finite-element and hydrodynamic models, operational history, environmental conditions, sensor information, and data-driven predictions. Artificial Intelligence (AI) techniques can help extract, link, query, and infer information across these sources, but engineering use requires more than prediction: the origin, assumptions, dependencies, uncertainty, and accuracy of results must remain traceable and quantifiable.
 
 # Connecting lifecycle information
 
@@ -38,6 +38,8 @@ Third, **hybrid engineering intelligence** combines physical knowledge, operatio
 Returning to the question in the title—whether AI can solve the maritime industry’s lifecycle information problem—the answer is not simply yes. AI alone cannot address a challenge that also depends on stakeholders adopting shared practices and ways of connecting information. Its contribution will depend on whether data from different lifecycle phases can be linked while preserving the engineering context, assumptions, and uncertainty needed to interpret it.
 
 These questions also guide my proposed PhD research, which will investigate how semantic representations and AI methods might support such connections in maritime engineering cases. For anyone considering AI for an engineering task, a useful starting point is to ask whether the information it relies on is connected and understandable, and whether its results can be checked before they inform a decision.
+
+I would be interested to hear if others encounter these information gaps in practice, and what they would need to trust an AI-supported engineering result.
 
 ## References
 
