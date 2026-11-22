@@ -11,7 +11,7 @@ if len(sys.argv) < 3 or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', sys.argv[1
     raise SystemExit('Usage: python scripts/new_post.py stable-post-slug "Post title"')
 path = ROOT / 'content/posts' / (sys.argv[1] + '.md')
 path.parent.mkdir(exist_ok=True)
-with path.open('x') as file:
+with path.open('x', encoding='utf-8') as file:
     file.write(f'''+++
 title = {json.dumps(sys.argv[2])}
 date = {date.today().isoformat()}

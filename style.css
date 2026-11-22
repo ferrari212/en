@@ -705,8 +705,15 @@ canvas {
   min-width: 0;
   overflow-wrap: anywhere;
 }
+.prose h1 {
+  font-size: clamp(1.9rem, 3.2vw, 2.3rem);
+  margin-top: 2.8rem;
+}
+.prose h1:first-child {
+  margin-top: 0;
+}
 .prose h2 {
-  font-size: 1.65rem;
+  font-size: clamp(1.6rem, 2.6vw, 1.9rem);
   margin-top: 2.4rem;
 }
 .prose h2:first-child {

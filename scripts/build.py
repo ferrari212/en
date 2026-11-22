@@ -9,7 +9,10 @@ from pathlib import Path
 import re
 import shutil
 from string import Template
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 from urllib.parse import quote
 from xml.sax.saxutils import escape as xml_escape
 
@@ -37,9 +40,9 @@ def render_markdown(text):
 def projects():
     result = []
     for slug in PROJECT_ORDER:
-        meta = json.loads((ROOT / 'content/projects' / f'{slug}.json').read_text())
+        meta = json.loads((ROOT / 'content/projects' / f'{slug}.json').read_text(encoding='utf-8'))
         assert meta['slug'] == slug
-        meta['body'] = render_markdown((ROOT / 'content/projects' / f'{slug}.md').read_text())
+        meta['body'] = render_markdown((ROOT / 'content/projects' / f'{slug}.md').read_text(encoding='utf-8'))
         if meta['image']:
             name = Path(meta['image']).stem
             meta['image'] = f'/images/optimized/{name}.webp'
@@ -52,7 +55,7 @@ def posts(content_dir, include_drafts=False):
     for file in sorted(content_dir.glob('*.md')):
         if file.name == 'README.md':
             continue
-        raw = file.read_text()
+        raw = file.read_text(encoding='utf-8')
         if not raw.startswith('+++\n') or '\n+++\n' not in raw[4:]:
             raise ValueError(f'{file.name}: TOML metadata must be wrapped in +++ lines')
         head, body = raw[4:].split('\n+++\n', 1)
@@ -95,7 +98,7 @@ def layout(body, title, description, path, active='', image='/images/optimized/G
     arrow = '<svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>'
     body = body.replace('↗', arrow)
     nav = ''.join(f'<a href="{url}"' + (' aria-current="page"' if active == key else '') + f'>{label}</a>' for key, label, url in [('home','Home','/'),('projects','Projects','/projects/'),('blog','Writing','/blog/'),('about','About','/about/')]) + '<a class="nav-contact" href="#contact">Contact ↗</a>'
-    return Template((ROOT / 'templates/layout.html').read_text()).substitute(title=e(title + ' · Felipe Ferrari'), description=e(description), canonical=e(BASE_URL + path), og_type='article' if article else 'website', share_image=e(BASE_URL + image), extra_head=extra_head, navigation=nav, body=body).replace('↗', arrow).replace("  \n", "\n")
+    return Template((ROOT / 'templates/layout.html').read_text(encoding='utf-8')).substitute(title=e(title + ' · Felipe Ferrari'), description=e(description), canonical=e(BASE_URL + path), og_type='article' if article else 'website', share_image=e(BASE_URL + image), extra_head=extra_head, navigation=nav, body=body).replace('↗', arrow).replace("  \n", "\n")
 
 
 def build(output, posts_dir, include_drafts=False):
@@ -111,8 +114,8 @@ def build(output, posts_dir, include_drafts=False):
     for post in writing:
         if not isinstance(post.get('projects', []), list) or set(post.get('projects', [])) - known_projects:
             raise ValueError(f'{post["slug"]}: projects must reference existing project slugs')
-    recent = '<section class="shell section-space"><div class="section-heading"><div><p class="eyebrow">RECENT WRITING</p><h2>Notes from the work.</h2></div><a class="text-link" href="/blog/">All writing →</a></div><div class="writing-grid">' + ''.join(post_card(p) for p in writing[:3]) + '</div></section>' if writing else '''<section class="shell section-space writing-intro"><div><p class="eyebrow">TECHNICAL WRITING</p><h2>Technical notes & tutorials</h2><p>A space for notes on scientific computing, engineering software, and my developing research in applied AI. No posts published yet; the existing Vessel.js tutorial is a place to start.</p><a class="text-link" href="/blog/">Explore writing & the tutorial →</a></div><a class="writing-resource" href="/projects/vesseljs-tutorial/"><span class="eyebrow">EXISTING INTERACTIVE GUIDE</span><h3>From the hull to simulation</h3><p>Follow the path from vessel data to a digital model and manoeuvrability simulation.</p><span>Read about the guide ↗</span></a></section>'''
-    home = Template((ROOT / 'templates/home.html').read_text()).substitute(selected_projects=''.join(project_card(p,i+1) for i,p in enumerate(work[:3])), writing_section=recent)
+    recent = '<section class="shell section-space"><div class="section-heading"><div><p class="eyebrow">RECENT WRITING</p><h2>Notes from my work.</h2></div><a class="text-link" href="/blog/">All writing →</a></div><div class="writing-grid">' + ''.join(post_card(p) for p in writing[:3]) + '</div></section>' if writing else '''<section class="shell section-space writing-intro"><div><p class="eyebrow">TECHNICAL WRITING</p><h2>Technical notes & tutorials</h2><p>A space for notes on scientific computing, engineering software, and my developing research in applied AI. No posts published yet; the existing Vessel.js tutorial is a place to start.</p><a class="text-link" href="/blog/">Explore writing & the tutorial →</a></div><a class="writing-resource" href="/projects/vesseljs-tutorial/"><span class="eyebrow">EXISTING INTERACTIVE GUIDE</span><h3>From the hull to simulation</h3><p>Follow the path from vessel data to a digital model and manoeuvrability simulation.</p><span>Read about the guide ↗</span></a></section>'''
+    home = Template((ROOT / 'templates/home.html').read_text(encoding='utf-8')).substitute(selected_projects=''.join(project_card(p,i+1) for i,p in enumerate(work[:3])), writing_section=recent)
     page('/', home, 'Engineering models, software & maritime data', 'Felipe Ferrari — naval and structural engineer building scientific software, maritime simulations, and data applications. Developing a specialization in applied AI.', 'home')
     all_work = ''.join(project_card(p,i+1) for i,p in enumerate(work))
     page('/projects/', f'''<section class="shell page-intro"><p class="eyebrow">PROJECTS & DEMONSTRATIONS</p><h1>Engineering you can<br><em>see and explore.</em></h1><p class="lede">Numerical models, interactive tools, and research from my work in maritime engineering. Individual contributions and collaborative work are identified on each project page.</p></section><section class="shell section-space compact-top" aria-label="Project collection"><div class="project-grid">{all_work}</div><aside class="related-note"><h2>More from the original portfolio</h2><p><a href="https://shiplab.github.io/vesseljs/examples/epoch.html">Offshore operations visualization ↗</a> — a collaborative ShipLab example illustrating an offshore operation for carbon dioxide storage.</p><p><a href="https://shiplab.github.io/vesseljs/">Explore the Vessel.js library ↗</a></p></aside></section>''', 'Projects', 'Explore Vessel3D, FEAScript contributions, ship manoeuvring, floating-body dynamics, Gunnerus, catenary models, and digital twin research.', 'projects')
@@ -123,9 +126,9 @@ def build(output, posts_dir, include_drafts=False):
         related_html = '<section class="related-note"><h2>Related writing</h2>' + ''.join(post_card(post) for post in related) + '</section>' if related else ''
         body = f'''<section class="shell page-intro"><a class="breadcrumb" href="/projects/">← All projects</a><p class="eyebrow">{e(project['category'])}</p><h1>{e(project['title'])}</h1><p class="lede">{e(project['summary'])}</p>{tags(project['tags'])}</section><div class="shell project-detail">{image}<div class="detail-grid"><article class="prose">{project['body']}{related_html}</article><aside class="project-sidebar"><p class="eyebrow">MY CONTRIBUTION</p><p>{e(project['contribution'])}</p><h2>Explore the work</h2><div class="actions">{links}</div><p class="small">Demonstrations open on their original project websites.</p></aside></div></div>'''
         page('/projects/'+project['slug']+'/', body, project['title'], project['summary'], 'projects', project['image'])
-    publications = json.loads((ROOT / 'content/publications.json').read_text())
+    publications = json.loads((ROOT / 'content/publications.json').read_text(encoding='utf-8'))
     table = '<table><caption>Selected research publications</caption><thead><tr><th scope="col">Year</th><th scope="col">Publication & authors</th><th scope="col">Venue</th></tr></thead><tbody>' + ''.join(f'<tr><th scope="row">{p["year"]}</th><td><a href="{e(p["url"])}">{e(p["title"])} ↗</a><p class="small">{e(p["authors"])}</p></td><td>{e(p["venue"])}</td></tr>' for p in publications) + '</tbody></table>'
-    about = Template((ROOT / 'templates/about.html').read_text()).substitute(publication_table=table)
+    about = Template((ROOT / 'templates/about.html').read_text(encoding='utf-8')).substitute(publication_table=table)
     page('/about/', about, 'About & publications', 'Felipe Ferrari: naval and structural engineering, DNV experience, NTNU research, publications, the Wakeham Prize, and life beyond the models.', 'about', '/images/optimized/portrait.webp')
     filters = '<div class="tag-filters" role="group" aria-label="Filter writing by topic"><button type="button" aria-pressed="true" data-tag="all">All topics</button>' + ''.join(f'<button type="button" aria-pressed="false" data-tag="{e(tag)}">{e(tag)}</button>' for tag in sorted({tag for p in writing for tag in p['tags']})) + '</div>' if writing else ''
     cards = ''.join(f'<div data-post-tags="{e(json.dumps(p["tags"]))}">{post_card(p)}</div>' for p in writing)
@@ -144,7 +147,7 @@ def build(output, posts_dir, include_drafts=False):
     generated['.nojekyll'] = ''
     output.mkdir(parents=True, exist_ok=True)
     manifest = output / '.generated-pages.json'
-    previous = json.loads(manifest.read_text()) if manifest.exists() else []
+    previous = json.loads(manifest.read_text(encoding='utf-8')) if manifest.exists() else []
     # Only delete old generated files, never an arbitrary path supplied in a manifest.
     for filename in set(previous) - set(generated):
         target = (output / filename).resolve()
@@ -154,8 +157,8 @@ def build(output, posts_dir, include_drafts=False):
     for filename, contents in generated.items():
         target = output / filename
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(contents)
-    manifest.write_text(json.dumps(sorted(generated), indent=2)+'\n')
+        target.write_text(contents, encoding='utf-8')
+    manifest.write_text(json.dumps(sorted(generated), indent=2)+'\n', encoding='utf-8')
     if output.resolve() != ROOT:
         for filename in ['style.css', 'index.js', 'favicon.svg', 'Felipe_CV.pdf', 'CNAME']:
             shutil.copy2(ROOT / filename, output / filename)
